@@ -18,6 +18,6 @@ int main(){
         fast = max(fast, speed[i]);
         ret += (pos[i]-pos[i+1])/fast;
     }
-    cout << ret << '\n';
+    printf("%lf\n", ret);
     return 0;
 }
