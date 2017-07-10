@@ -51,4 +51,5 @@ int main(){
     }
     memset(dp, -1, sizeof(dp));
     cout << go(2, 0, -1) << '\n';
+    return 0;
 }
