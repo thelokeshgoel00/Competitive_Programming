@@ -9,7 +9,7 @@ using namespace std;
 
 int n;
 double ret = 0.0, curSpeed;
-pair<double, double> cars [100000];
+pair<double, double> cars [100005];
 
 int main(){
     scanf("%d", &n);
@@ -20,6 +20,6 @@ int main(){
         curSpeed = max(curSpeed, cars[i].second);
     }
     ret += cars[n-1].first/curSpeed;
-    printf("%lf\n", ret);
+    printf("%.6lf\n", ret);
     return 0;
 }
