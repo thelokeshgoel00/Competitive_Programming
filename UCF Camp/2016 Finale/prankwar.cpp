@@ -9,7 +9,6 @@
 using namespace std;
 
 int main(){
-    //freopen("shufflegold.in","r",stdin); freopen("shufflegold.out","w",stdout);
     int n, w, i; scanf("%d %d", &n, &w); int arr [n];
     for(i = 0; i < n; i++) scanf("%d", &arr[i]);
     sort(arr, arr+n); int sum = 0;
