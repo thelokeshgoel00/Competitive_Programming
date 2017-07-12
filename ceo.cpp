@@ -80,7 +80,7 @@ int main(){
             auto index1 = e.rating1 < e.rating2 ? inQueue.find(Player(e.rating1, e.time1)) : inQueue.find(Player(e.rating2, e.time2));
             auto index2 = e.rating1 > e.rating2 ? inQueue.find(Player(e.rating1, e.time1)) : inQueue.find(Player(e.rating2, e.time2));
             auto hindex = next(index2);
-            if(index1 != inQueue.begin() && index2 != inQueue.begin()){
+            if(index1 != inQueue.begin() && hindex != inQueue.end()){
                 auto lindex = prev(index1);
                 Player p1 = *lindex; Player p2 = *hindex;
                 int when = max(max(p1.startTime, p2.startTime),
