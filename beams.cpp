@@ -12,7 +12,7 @@ using namespace std;
 int algo(string now){
     int ret = 0; bool removed = true; string ss = now;
     while(ss.length() > 0 && removed){
-        int curRun = 1; char curLetter = s[0];
+        int curRun = 1; char curLetter = ss[0];
         string temp = "";
         removed = false;
         for(int i = 1; i < ss.length(); i++){
