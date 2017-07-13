@@ -28,7 +28,7 @@ int algo(string now){
         if(curRun%2 == 1) temp += s[s.length()-1];
         ret += curRun/2; s = temp;
     }
-    return ret+s.length()/3;
+    return ret+(s.length()-1)/2;
 }
 
 int ans;
