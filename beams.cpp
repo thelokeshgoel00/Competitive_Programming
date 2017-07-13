@@ -37,7 +37,7 @@ string s;
 int main(){
     string s; cin >> s;
     ans = algo(s);
-    if(s.length() > 2 && s[0] == s[s.length()-1]) ans = max(ans, 1+algo(s.substr(1, s.length()-2)));
+    //if(s.length() > 2 && s[0] == s[s.length()-1]) ans = max(ans, 1+algo(s.substr(1, s.length()-2)));
     cout << ans << '\n';
     return 0;
 }
