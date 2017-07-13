@@ -10,25 +10,25 @@
 using namespace std;
 
 int algo(string now){
-    int ret = 0; bool removed = true; string s = now;
-    while(s.length() > 0 && removed){
+    int ret = 0; bool removed = true; string ss = now;
+    while(ss.length() > 0 && removed){
         int curRun = 1; char curLetter = s[0];
         string temp = "";
         removed = false;
-        for(int i = 1; i < s.length(); i++){
-            if(s[i] == curLetter) curRun++;
+        for(int i = 1; i < ss.length(); i++){
+            if(ss[i] == curLetter) curRun++;
             else{
                 ret += curRun/2;
                 if(curRun/2 > 0) removed = true;
-                if(curRun%2 == 1) temp += s[i-1];
-                curRun = 1; curLetter = s[i];
+                if(curRun%2 == 1) temp += ss[i-1];
+                curRun = 1; curLetter = ss[i];
             }
         }
         if(curRun/2 > 0) removed = true;
-        if(curRun%2 == 1) temp += s[s.length()-1];
-        ret += curRun/2; s = temp;
+        if(curRun%2 == 1) temp += ss[ss.length()-1];
+        ret += curRun/2; ss = temp;
     }
-    return ret+(s.length()-1)/2;
+    return ret+(ss.length()-1)/2;
 }
 
 int ans;
