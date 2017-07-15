@@ -12,7 +12,7 @@ using namespace std;
 
 #define MOD 1000000007
 
-int n, m, parents [20010], discoveryTime [20010], lowest [20010], time = 0;
+int n, m, parents [20010], discoveryTime [20010], lowest [20010], tiempo = 0;
 pair<int, int> edges [100010]; //first = from, second = to
 vector<pair<int, int>> adjacency [20010]; //first = ID, second = to
 stack<int> curGroup;
@@ -26,7 +26,7 @@ void popIt(int edgy){
 }
 
 void findBCC(int curr, bool isRoot){
-    discoveryTime[curr] = time; lowest[curr] = time; time++;
+    discoveryTime[curr] = tiempo; lowest[curr] = tiempo; tiempo++;
     int numChildren = 0;
     for(int k = 0; k < adjacency[curr].size(); k++){
         int next = adjacency[curr][k].second;
