@@ -79,7 +79,7 @@ int main(){
     }
     bool flag = true; long long prod = 1ll;
     for(int i = 0; i < components.size(); i++){
-        prod = (prod*(long long)components[i].size())%MOD;
+        prod = (prod*components[i].size())%MOD;
         if(!isLoop(components[i])){ flag = false; break; }
     }
     if(!flag){ cout << "safe\n"; return 0; }
