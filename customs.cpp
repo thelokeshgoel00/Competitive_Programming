@@ -7,6 +7,7 @@
 #include <set>
 #include <stack>
 #include <string.h>
+#include <math.h>
 
 using namespace std;
 
