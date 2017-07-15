@@ -10,6 +10,8 @@
 
 using namespace std;
 
+#define MOD 1000000007
+
 int n, m, parents [20010], discoveryTime [20010], lowest [20010], time = 0;
 pair<int, int> edges [100010]; //first = from, second = to
 vector<pair<int, int>> adjacency [20010]; //first = ID, second = to
@@ -57,7 +59,7 @@ int main(){
         adjacency[a].push_back(make_pair(i, b)); adjacency[b].push_back(make_pair(i, a));
         edges[i] = make_pair(a, b);
     }
-    int numMarked = 0; bool isConnected = true, marked [20010]; memset(marked, false, sizeof(marked)); queue<int> q; q.push(1);
+    int numMarked = 0; bool marked [20010]; memset(marked, false, sizeof(marked)); queue<int> q; q.push(1);
     while(q.size() > 0){
         int now = q.front(); q.pop();
         if(marked[now]) continue;
@@ -76,8 +78,8 @@ int main(){
     }
     bool flag = true; long long prod = 1ll;
     for(int i = 0; i < components.size(); i++){
-        prod = (prod*(long long)components[i].size())%1000000007ll;
-        if(!isLoop(components[i])){ flag = false; break;}
+        prod = (prod*(long long)components[i].size())%MOD;
+        if(!isLoop(components[i])){ flag = false; break; }
     }
     if(!flag){ cout << "safe\n"; return 0; }
     cout << prod << '\n';
