@@ -44,4 +44,5 @@ int main(){
     */
     if(lowret == 2e18) cout << "-1\n";
     else cout << lowret << " " << highret << '\n';
+    return 0;
 }
