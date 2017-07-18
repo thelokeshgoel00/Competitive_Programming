@@ -17,8 +17,8 @@ int fullCheck(int diff){
     if(diff%2 == 1) return 2;
     int ret = 1;
     for(int i = 1; i < a+b; i++){
-        if(places[i].second != places[i-1].second && places[i].first-places[i-1].first == diff/2) continue;
-        if(places[i].second == places[i-1].second && places[i].first-places[i-1].first == diff) continue;
+        if(places[i].second != places[i-1].second && places[i].first-places[i-1].first%diff == diff/2) continue;
+        if(places[i].second == places[i-1].second && places[i].first-places[i-1].first%diff == 0) continue;
         ret = 2; break;
     }
     return ret;
@@ -27,8 +27,8 @@ int fullCheck(int diff){
 int halfCheck(int diff){
     int ret = 1;
     for(int i = 1; i < a+b; i++){
-        if(places[i].second != places[i-1].second && places[i].first-places[i-1].first == diff) continue;
-        if(places[i].second == places[i-1].second && places[i].first-places[i-1].first == 2*diff) continue;
+        if(places[i].second != places[i-1].second && places[i].first-places[i-1].first%(2*diff) == diff) continue;
+        if(places[i].second == places[i-1].second && places[i].first-places[i-1].first%(2*diff) == 0) continue;
         ret = 2; break;
     }
     return ret;
@@ -37,8 +37,8 @@ int halfCheck(int diff){
 int oneCheck(){
     int ret = 1;
     for(int i = 1; i < a+b; i++){
-        if(places[i].second != places[i-1].second && places[i].first-places[i-1].first == 1) continue;
-        if(places[i].second == places[i-1].second && places[i].first-places[i-1].first == 2) continue;
+        if(places[i].second != places[i-1].second && places[i].first-places[i-1].first%2 == 1) continue;
+        if(places[i].second == places[i-1].second && (places[i].first-places[i-1].first)%2 == 0) continue;
         ret = 2; break;
     }
     return ret;
