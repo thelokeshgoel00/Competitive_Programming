@@ -10,8 +10,8 @@
 
 using namespace std;
 
-int n, m, colors [2001], c1 = 0, c2 = 0, singles = 0, curSize, visited [2001];
-vector<int> adjacency [2001], considering;
+int n, m, colors [2001], c1, c2, curSize, visited [2001];
+vector<int> adjacency [2001], considering, groups;
 
 void bfs(int curr){
     if(visited[curr]) return;
@@ -49,24 +49,32 @@ int main(){
     for(int i = 1; i <= n; i++){
         if(visited[i]) continue;
         curSize = 0; considering.clear(); bfs(i);
-        if(curSize == 1){ singles++; continue; }
+        if(curSize == 1){ groups.push_back(1); continue; }
         if(!isColorable(0)){ flag = false; break; }
+        c1 = 0; c2 = 0;
+        for(int i = 0; i < considering.size(); i++){
+            if(colors[considering[i]] == 0) c1++;
+            else c2++;
+        }
+        groups.push_back(c1); groups.push_back(c2);
     }
     if(!flag) cout << "Impossible\n";
     else{
-        for(int i = 1; i <= n; i++){
-            if(colors[i] == 0) c1++;
-            else c2++;
-        }
-        if(c1 > c2) swap(c1, c2);
-        if(c1+singles <= c2) c1 += singles;
-        else{
-            c1 = c2;
-            singles -= c2-c1;
-            c1 += singles/2; c2 += singles/2;
-            if(singles%2 == 1) c2++;
-        }
-        cout << c1 << " " << c2 << '\n';
+        bool dp [n+1][n+1]; memset(dp, false, sizeof(dp)); dp[0][0] = true;
+        for(int i = 1; i <= groups.size(); i++)
+            for(int j = 0; j <= n; j++){
+                dp[i][j] = dp[i-1][j];
+                if(groups[i-1] <= j) dp[i][j] = dp[i][j] || dp[i-1][j-groups[i-1]];
+            }
+        int diff = 5000;
+        for (int j = n/2; j > -1; j--)
+            if (dp[groups.size()][j] == true){
+                diff = n-2*j;
+                break;
+            }
+        for(int i = 0; i < groups.size(); i++) cout << groups[i] << " ";
+        cout << endl;
+        cout << n-(diff+n)/2 << " " << (diff+n)/2 << '\n';
     }
     return 0;
 }
