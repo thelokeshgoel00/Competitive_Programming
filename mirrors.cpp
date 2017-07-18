@@ -25,6 +25,7 @@ int main(){
         if(diff%2 == 1){ cout << "2\n"; return 0; }
         diff /= 2;
     }
+    if(diff == 0){ cout << "2\n"; return 0; }
     int ret = 1;
     for(int i = 2; i < a+b; i++){
         if(places[i].second != places[i-1].second && places[i].first-places[i-1].first == diff) continue;
