@@ -13,8 +13,28 @@ using namespace std;
 int n, a, b;
 vector<pair<int, int>> places;
 
-int oddCheck(){
-    if(places[0].first%2 != 1) return 2;
+int fullCheck(int diff){
+    if(diff%2 == 1) return 2;
+    int ret = 1;
+    for(int i = 1; i < a+b; i++){
+        if(places[i].second != places[i-1].second && places[i].first-places[i-1].first == diff/2) continue;
+        if(places[i].second == places[i-1].second && places[i].first-places[i-1].first == diff) continue;
+        ret = 2; break;
+    }
+    return ret;
+}
+
+int halfCheck(int diff){
+    int ret = 1;
+    for(int i = 1; i < a+b; i++){
+        if(places[i].second != places[i-1].second && places[i].first-places[i-1].first == diff) continue;
+        if(places[i].second == places[i-1].second && places[i].first-places[i-1].first == 2*diff) continue;
+        ret = 2; break;
+    }
+    return ret;
+}
+
+int oneCheck(){
     int ret = 1;
     for(int i = 1; i < a+b; i++){
         if(places[i].second != places[i-1].second && places[i].first-places[i-1].first == 1) continue;
@@ -32,16 +52,6 @@ int main(){
     sort(places.begin(), places.end());
     if(a+b < 2){ cout << a+b << "\n"; return 0; }
     int diff = places[0].first;
-    if(places[1].second == places[0].second && places[1].first-places[0].first == diff){
-        if(diff%2 == 1){ cout << "2\n"; return 0; }
-        diff /= 2;
-    }
-    int ret = 1;
-    for(int i = 1; i < a+b; i++){
-        if(places[i].second != places[i-1].second && places[i].first-places[i-1].first == diff) continue;
-        if(places[i].second == places[i-1].second && places[i].first-places[i-1].first == 2*diff) continue;
-        ret = 2; break;
-    }
-    cout << min(ret, oddCheck()) << '\n';
+    cout << min(oneCheck(), min(fullCheck(diff), halfCheck(diff))) << '\n';
     return 0;
 }
