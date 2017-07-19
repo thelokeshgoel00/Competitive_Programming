@@ -14,7 +14,7 @@ int n, m, colors [200010], c1, c2, curSize, visited [200010], lesserCount = 0;
 vector<int> adjacency [200010], considering, groups, reduced;
 
 void bfs(int curr){
-    /*if(visited[curr]) return;
+    /*if(visited[curr]) return;                           Recursion RTEs on Judge
     visited[curr] = true; curSize++;
     considering.push_back(curr);
     for(int i = 0; i < adjacency[curr].size(); i++)
@@ -33,7 +33,7 @@ void bfs(int curr){
 }
 
 int isColorable(int curr, int prevColor){
-    /*int color = 0, ret = 1;
+    /*int color = 0, ret = 1;                             Recursion RTEs on Judge
     if(prevColor == 0) color = 1;
     colors[curr] = color;
     for(int j : adjacency[curr]){
