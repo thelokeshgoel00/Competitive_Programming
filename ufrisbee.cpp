@@ -14,23 +14,44 @@ int n, m, colors [200010], c1, c2, curSize, visited [200010], lesserCount = 0;
 vector<int> adjacency [200010], considering, groups, reduced;
 
 void bfs(int curr){
-    if(visited[curr]) return;
+    /*if(visited[curr]) return;
     visited[curr] = true; curSize++;
     considering.push_back(curr);
     for(int i = 0; i < adjacency[curr].size(); i++)
         if(!visited[adjacency[curr][i]])
-            bfs(adjacency[curr][i]);
+            bfs(adjacency[curr][i]);*/
+    queue<int> q; q.push(curr);
+    while(q.size() > 0){
+        int now = q.front(); q.pop();
+        if(visited[now]) continue;
+        visited[now] = true; curSize++;
+        considering.push_back(now);
+        for(int i = 0; i < adjacency[now].size(); i++)
+            if(!visited[adjacency[now][i]])
+                q.push(adjacency[now][i]);
+    }
 }
 
 int isColorable(int curr, int prevColor){
-    bool possible = true; int color = 0, ret = 1;
+    /*int color = 0, ret = 1;
     if(prevColor == 0) color = 1;
     colors[curr] = color;
     for(int j : adjacency[curr]){
         if(colors[j] == color) return 0;
         else if(colors[j] == -1) ret += isColorable(j, color);
+    }*/
+    queue<pair<int, int>> q; q.push(make_pair(curr, prevColor));
+    while(q.size() > 0){
+        pair<int, int> now = q.front(); q.pop();
+        int color = 0;
+        if(now.second == 0) color = 1;
+        colors[now.first] = color;
+        for(int j : adjacency[now.first]){
+            if(colors[j] == color) return 0;
+            else if(colors[j] == -1) q.push(make_pair(j, color));
+        }
     }
-    return ret;
+    return curSize;
 }
 
 int main(){
@@ -45,7 +66,7 @@ int main(){
         if(visited[i]) continue;
         curSize = 0; considering.clear(); bfs(i);
         if(curSize == 1){ groups.push_back(1); continue; }
-        if(isColorable(considering[0], -1) != considering.size()){ flag = false; break; }
+        if(isColorable(considering[0], -1) != curSize){ flag = false; break; }
         c1 = 0; c2 = 0;
         for(int i = 0; i < considering.size(); i++){
             if(colors[considering[i]] == 0) c1++;
