@@ -10,8 +10,8 @@
 
 using namespace std;
 
-int n, m, colors [200001], c1, c2, curSize, visited [200001], lesserCount = 0;
-vector<int> adjacency [200001], considering, groups, reduced;
+int n, m, colors [200010], c1, c2, curSize, visited [200010], lesserCount = 0;
+vector<int> adjacency [200010], considering, groups, reduced;
 
 void bfs(int curr){
     if(visited[curr]) return;
@@ -55,8 +55,8 @@ int main(){
     }
     if(!flag) cout << "Impossible\n";
     else{
-        int freq [800001]; memset(freq, 0, sizeof(freq)); for(int i : groups) freq[i]++;
-        for(int i = 1; i < 800001; i++){
+        int freq [200010]; memset(freq, 0, sizeof(freq)); for(int i : groups) freq[i]++;
+        for(int i = 1; i < 200010; i++){
             if(freq[i] == 0) continue;
             int numPairs = (freq[i]-1)/2;
             freq[2*i] += numPairs; freq[i] -= numPairs*2;
