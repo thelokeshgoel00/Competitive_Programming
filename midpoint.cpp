@@ -11,38 +11,20 @@
 using namespace std;
 
 int n;
-long long arr [100010], low, high, lowret = 2e18, highret = -2e18;
+long long arr [100010], low, high, templo, temphi;
 
 int main(){
     cin >> n;
     for(int i = 0; i < n; i++) cin >> arr[i];
-    low = -2e18-1, high = arr[0]-1;
-    while(low <= high){
-        long long mid = (low+high)/2, curPoint = mid;
-        bool flag = true;
-        for(int i = 0; i < n-1; i++){
-            long long nextPoint = 2ll*arr[i]-curPoint;
-            if(nextPoint >= arr[i+1]){ flag = false; break; }
-            curPoint = nextPoint;
-        }
-        if(flag){ lowret = min(lowret, mid); highret = max(highret, mid); high = mid-1; }
-        else low = mid+1;
+    low = arr[n-2]+1; high = arr[n-1]-1;
+    for(int i = n-2; i > 0; i--){
+        templo = low, temphi = high;
+        low = 2*arr[i]-temphi; high = 2*arr[i]-templo;
+        low = max(low, arr[i-1]+1);
+        if(low > high){ cout << "-1\n"; return 0; }
     }
-    /*
-    low = -2e18-1, high = arr[0]-1;
-    while(low <= high){
-        long long mid = (low+high)/2, curPoint = mid;
-        bool flag = true;
-        for(int i = 0; i < n-1; i++){
-            long long nextPoint = 2ll*arr[i]-curPoint;
-            if(nextPoint >= arr[i+1]){ flag = false; break; }
-            curPoint = nextPoint;
-        }
-        if(flag){ highret = mid; low = mid+1; }
-        else high = mid-1;
-    }
-    */
-    if(lowret == 2e18) cout << "-1\n";
-    else cout << lowret << " " << highret << '\n';
+    templo = low, temphi = high;
+    low = 2*arr[0]-temphi; high = 2*arr[0]-templo;
+    cout << low << " " << high << '\n';
     return 0;
 }
