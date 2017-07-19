@@ -10,8 +10,8 @@
 
 using namespace std;
 
-int n, m, colors [2001], c1, c2, curSize, visited [2001];
-vector<int> adjacency [2001], considering, groups;
+int n, m, colors [200001], c1, c2, curSize, visited [200001], lesserCount = 0;
+vector<int> adjacency [200001], considering, groups, reduced;
 
 void bfs(int curr){
     if(visited[curr]) return;
@@ -51,25 +51,31 @@ int main(){
             if(colors[considering[i]] == 0) c1++;
             else c2++;
         }
-        groups.push_back(c1); groups.push_back(c2);
+        lesserCount += min(c1, c2); groups.push_back(max(c1, c2)-min(c1, c2));
     }
     if(!flag) cout << "Impossible\n";
     else{
-        bool dp [n+1][n+1]; memset(dp, false, sizeof(dp)); dp[0][0] = true;
+        int freq [200001]; memset(freq, 0, sizeof(freq)); for(int i : groups) freq[i]++;
+        for(int i = 1; i < 200001; i++){
+            if(freq[i] == 0) continue;
+            int numPairs = (freq[i]-1)/2;
+            freq[2*i] += numPairs; freq[i] -= numPairs*2;
+            for(int j = 0; j < freq[i]; j++) reduced.push_back(i);
+        }
+        groups = reduced;
+        bool dp [n-2*lesserCount+1]; memset(dp, false, sizeof(dp)); dp[0] = true;
         for(int i = 1; i <= groups.size(); i++)
-            for(int j = 0; j <= n; j++){
-                dp[i][j] = dp[i-1][j];
-                if(groups[i-1] <= j) dp[i][j] = dp[i][j] || dp[i-1][j-groups[i-1]];
-            }
-        int diff = 5000;
-        for (int j = n/2; j > -1; j--)
-            if (dp[groups.size()][j] == true){
-                diff = n-2*j;
+            for(int j = n-2*lesserCount; j >= groups[i-1]; j--)
+                dp[j] = dp[j] || dp[j-groups[i-1]];
+        int add = -1337;
+        //for(int i = 0; i < 7; i++) cout << i << " " << dp[i] << endl;
+        for(int j = n/2-lesserCount; j > -1; j--)
+            if(dp[j] == true){
+                add = j;
                 break;
             }
-        for(int i = 0; i < groups.size(); i++) cout << groups[i] << " ";
-        cout << endl;
-        cout << n-(diff+n)/2 << " " << (diff+n)/2 << '\n';
+        //for(int i = 0; i < groups.size(); i++) cout << "hi" << groups[i] << "\n";
+        cout << lesserCount+add << " " << n-lesserCount-add << '\n';
     }
     return 0;
 }
