@@ -55,8 +55,8 @@ int main(){
     }
     if(!flag) cout << "Impossible\n";
     else{
-        int freq [200001]; memset(freq, 0, sizeof(freq)); for(int i : groups) freq[i]++;
-        for(int i = 1; i < 200001; i++){
+        int freq [800001]; memset(freq, 0, sizeof(freq)); for(int i : groups) freq[i]++;
+        for(int i = 1; i < 800001; i++){
             if(freq[i] == 0) continue;
             int numPairs = (freq[i]-1)/2;
             freq[2*i] += numPairs; freq[i] -= numPairs*2;
