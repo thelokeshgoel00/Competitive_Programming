@@ -22,20 +22,15 @@ void bfs(int curr){
             bfs(adjacency[curr][i]);
 }
 
-bool isColorable(int curr){
-    if(curr == curSize) return true;
-    for(int color = 0; color < 2; color++){
-        bool possible = true;
-        for(int j : adjacency[considering[curr]])
-            if(colors[j] == color){ possible = false; break; }
-        if(possible){
-            colors[considering[curr]] = color;
-            bool b = isColorable(curr+1);
-            if(b) return true;
-            colors[considering[curr]] = -1;
-        }
+int isColorable(int curr, int prevColor){
+    bool possible = true; int color = 0, ret = 1;
+    if(prevColor == 0) color = 1;
+    colors[curr] = color;
+    for(int j : adjacency[curr]){
+        if(colors[j] == color) return 0;
+        else if(colors[j] == -1) ret += isColorable(j, color);
     }
-    return false;
+    return ret;
 }
 
 int main(){
@@ -50,7 +45,7 @@ int main(){
         if(visited[i]) continue;
         curSize = 0; considering.clear(); bfs(i);
         if(curSize == 1){ groups.push_back(1); continue; }
-        if(!isColorable(0)){ flag = false; break; }
+        if(isColorable(considering[0], -1) != considering.size()){ flag = false; break; }
         c1 = 0; c2 = 0;
         for(int i = 0; i < considering.size(); i++){
             if(colors[considering[i]] == 0) c1++;
