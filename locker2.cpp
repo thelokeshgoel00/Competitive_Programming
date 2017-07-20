@@ -35,11 +35,10 @@ int main(){
         }
         used[i] = true;
         if(buddyIndex != -1){
-            if(times[buddyIndex] == 15 && buddyIndex-i > 1){
-                int nindex = buddyIndex-(buddyIndex-i+1)%3;
-                for(int j = i+1; j <= nindex; j++) used[j] = true;
-                ret += (buddyIndex-i+1)/3;
-                continue;
+            if(times[buddyIndex] == 15){
+                ret = (times.size()-i)/3;
+                if((times.size()-i)%3 != 0) ret++;
+                break;
             }
             used[buddyIndex] = true;
         }
