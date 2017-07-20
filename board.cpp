@@ -12,20 +12,18 @@
 
 using namespace std;
 
-int n, ret = 14;
+int n, ret = 15;
 set<int> positions;
 
 int checkMask(int mask){
     vector<pair<int, int>> startPos; int numBits = 0;
     set<int> covered;
-    for(int i = 0; i < 7; i++) startPos.push_back(make_pair(0, i));
-    for(int i = 1; i < 8; i++) startPos.push_back(make_pair(0, i));
-    for(int i = 0; i < 14; i++){
+    for(int i = 0; i < 8; i++) startPos.push_back(make_pair(0, i));
+    for(int i = 1; i < 8; i++) startPos.push_back(make_pair(i, 0));
+    for(int i = 0; i < 15; i++){
         if((mask&(1<<i)) == 0) continue;
         numBits++;
-        int x = startPos[i].first, y = startPos[i].second, dx, dy;
-        if(i < 7){ dx = 1; dy = 1; }
-        else{ dx = 1; dy = -1; }
+        int x = startPos[i].first, y = startPos[i].second, dx = 1, dy = 1;
         while(x > -1 && y > -1 && x < 8 && y < 8){
             int temp = x*100+y;
             if(positions.find(temp) != positions.end()) covered.insert(temp);
@@ -42,7 +40,7 @@ int main(){
         int a, b; cin >> a >> b;
         positions.insert(a*100+b-101);
     }
-    for(int i = 0; i < (1<<14); i++){
+    for(int i = 0; i < (1<<15); i++){
         int gg = checkMask(i);
         if(gg != -1) ret = min(ret, gg);
     }
