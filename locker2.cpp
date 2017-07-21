@@ -12,38 +12,29 @@
 
 using namespace std;
 
-int n, arr [50], ret = 0;
-vector<int> times;
-bool used [50];
+int n, freq [50], ret = 50;
+
+int solver(){
+    vector<int> times;
+    for(int i = 15; i <= 45; i++)
+        for(int j = 0; j < freq[i]; j++)
+            times.push_back(i);
+    int low = 0, high = times.size()-1, counter = 0;
+    while(low < high){
+        if(times[low]+times[high] <= 45) low++;
+        high--; counter++;
+    }
+    if(low == high) counter++;
+    ret = min(ret, counter);
+}
 
 int main(){
     cin >> n;
-    for(int i = 0; i < n; i++) cin >> arr[i];
-    sort(arr, arr+n); memset(used, false, sizeof(used));
     for(int i = 0; i < n; i++){
-        if(arr[i] > 30) ret++;
-        else times.push_back(arr[i]);
+        int kachow; cin >> kachow;
+        freq[kachow]++;
     }
-    for(int i = 0; i < times.size(); i++){
-        //cout << times[i] << endl;
-        if(used[i]) continue;
-        int buddyIndex = -1;
-        for(int j = i+1; j < times.size(); j++){
-            if(used[j]) continue;
-            if(times[i]+times[j] <= 45) buddyIndex = j;
-            else break;
-        }
-        used[i] = true;
-        if(buddyIndex != -1){
-            if(times[buddyIndex] == 15){
-                ret = (times.size()-i)/3;
-                if((times.size()-i)%3 != 0) ret++;
-                break;
-            }
-            used[buddyIndex] = true;
-        }
-        ret++;
-    }
+    while(freq[15] >= 0){ solver(); freq[15] -= 3; }
     cout << ret << '\n';
     return 0;
 }
