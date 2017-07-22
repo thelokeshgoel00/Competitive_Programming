@@ -38,32 +38,29 @@ int main(){
 }
 
 /*
-Alternate Method
 
-#include <bits/stdc++.h>
- 
-using namespace std;
-const int L = 60, N = 1e5;
-typedef long long ll;
- 
-ll f[L];
-char s[N];
-int main(){
-    f[0] = 1;
-    for (int i = 1; i < L; ++ i)
-        f[i] = f[i - 1] * 2LL;
-    int n; cin >> n;
-    for (int i = 0; i < n; ++ i)
-        cin >> s[i];
-    ll k; cin >> k;
-    vector <int> ans;
-    int cur_l = 0;
-    while (k){
-        while (k > f[n - cur_l - 1])
-            k -= f[n - cur_l - 1], ++ cur_l;
-        ans.push_back(cur_l), ++ cur_l, -- k;
+***Alternate Method by Arup***
+
+int rank = stdin.nextInt();
+
+boolean space = false;
+for(int i = 0; i < n; i++){
+   
+    // Nothing more to print.
+    if (rank <= 0) break;
+    
+    // In this situation, we want topping i.
+    if (rank <= (1<<(n-i-1))) {
+        if (space) System.out.print(" ");
+        System.out.print(toppings[i]);
+        space = true;
+
+        // This is only one item we are going past, in terms of rank.
+        rank--;
     }
-    for (auto i : ans) cout << s[i] << " ";
-    return 0;
+
+    // Don't print and subtract out this bit mask, for all the ranks we're skipping.
+    else rank -= (1<<(n-i-1));
 }
+
 */
