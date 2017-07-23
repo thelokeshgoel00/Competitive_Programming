@@ -13,13 +13,11 @@
 
 using namespace std;
 
-int val;
-long long x, y, ret;
+long long x, y, ret, val;
 string a, b;
-map<long long, int> pRep;
-map<long long, long long> dp [20][2][2];
+map<long long, long long> pRep, dp [20][2][2];
 
-int PRCalc(long long prod){
+long long PRCalc(long long prod){
     long long curr = prod;
     if(pRep.find(prod) == pRep.end()){
         while(curr >= 10){
@@ -30,14 +28,14 @@ int PRCalc(long long prod){
             }
             curr = next;
         }
-        pRep[prod] = (int)(curr);
+        pRep[prod] = curr;
     }
     return pRep[prod];
 }
 
 long long recurse(int digit, int match, int nonzero, long long prod, string cap){
     if(digit == cap.length()){
-        int save = PRCalc(prod);
+        long long save = PRCalc(prod);
         if(save == val) return 1;
         return 0;
     }
@@ -46,7 +44,7 @@ long long recurse(int digit, int match, int nonzero, long long prod, string cap)
     long long sum = 0;
     for(int place = 0; place < 10; place++){
         if(match == 1 && place > cap[digit]-'0') break;
-        int nprod = prod, nmatch = match, nnz = nonzero;
+        long long nprod = prod; int nmatch = match, nnz = nonzero;
         if(place == 0 && nonzero == 1) nprod = 0;
         if(place > 0){ nprod *= place; nnz = 1; }
         if(place < cap[digit]-'0') nmatch = 0;
