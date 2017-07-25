@@ -17,7 +17,7 @@ int n, q, num, a, b;
 long long tree [100001], total = 0, ret;
 
 void add(int pos, long long val){
-    while(pos < n){
+    while(pos <= n){
         tree[pos] += val;
         pos += (pos&-pos);
     }
