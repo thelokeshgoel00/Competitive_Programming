@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <cmath>
 #include <queue>
+#include <stack>
 
 using namespace std;
 
