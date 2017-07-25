@@ -24,7 +24,7 @@ int main(){
             for(int j = s; j < 10*n+1; j++){
                 if(dp[i-1][j-s] == -1) continue;
                 if(dp[i][j] == -1) dp[i][j] = dp[i-1][j-s]+q;
-                else dp[i][j] = min(dp[i][j], dp[i-1][j-s]+q);
+                else dp[i][j] = max(dp[i][j], dp[i-1][j-s]+q);
             }
     }
     for(int i = 0; i < 10*n+1; i++)
