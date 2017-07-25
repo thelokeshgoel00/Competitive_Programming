@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int dp [9][9][512][8][2];
+int dp [9][9][512][8][2]; //curRow, curCol, rowToggle, subGridParity, rowParity
 char grid [9][9];
 
 int go(int r, int c, int mc, int mb, int p){
