@@ -14,6 +14,9 @@ using namespace std;
 
 #define MOD 1000000007
 
+//https://math.stackexchange.com/questions/1234696/number-of-ways-you-can-form-pairs-with-a-group-of-people-when-certain-people-can
+//https://math.stackexchange.com/questions/2093921/number-of-ways-to-make-n-pairs?rq=1
+
 int kase;
 long long waysToFormPairs [5001], comboIt [5001][5001];
 map<int, long long> speedup;
