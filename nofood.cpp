@@ -31,4 +31,5 @@ int main(){
             if(good){ cout << i << '\n'; break; }
         }
     }
+    return 0;
 }
