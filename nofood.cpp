@@ -22,7 +22,7 @@ int main(){
             cin >> x >> y;
             bois.push_back(make_pair(x, y));
         }
-        for(int i = 1; i < 10000000; i++){
+        for(int i = 1; ; i++){
             bool good = true;
             for(int j = 0; j < num+1; j++)
                 if(i%(bois[j].first+bois[j].second) < bois[j].first){
