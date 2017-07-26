@@ -13,7 +13,7 @@
 
 using namespace std;
 
-#define PI 3.1415926535897931
+#define PI 3.14159265
 
 int kase;
 double x, y, n, travelAng, ret;
@@ -23,7 +23,7 @@ int main(){
     for(int kk = 1; kk <= kase; kk++){
         cin >> x >> y >> n;
         travelAng = 2.0*PI/n-2.0*acos(x/(x+y));
-        if(travelAng < 0) ret = (x+y)*sqrt(2.0)-2*y;
+        if(travelAng < 0) ret = sqrt(2*pow(x+y, 2)*(1-cos(2.0*PI/n)))-2*y;
         else ret = 2.0*sqrt(pow(x+y, 2.0)-pow(x, 2.0))+travelAng*x-2*y;
         printf("%.2lf\n", ret);
     }
