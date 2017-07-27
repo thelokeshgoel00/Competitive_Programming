@@ -57,11 +57,9 @@ int main(){
         map<pair<long long, long long>, int> leftMap, rightMap;
         memset(leftWays, 0, sizeof(leftWays)); memset(rightWays, 0, sizeof(rightWays));
         fillMap(leftMap, leftBeans, leftWays); fillMap(rightMap, rightBeans, rightWays);
-        //cout << leftMap.size() << " " << rightMap.size() << endl;
         for(auto iter = leftMap.begin(); iter != leftMap.end(); iter++){
             pair<long long, long long> now = iter->first;
             pair<long long, long long> need; need.first = target.first-now.first; need.second = target.second-now.second;
-            //cout << now.first << " " << now.second << " " << need.first << " " << need.second << endl;
             if(rightMap.find(need) == rightMap.end()) continue;
             int leftIndex = leftMap[now]; int rightIndex = rightMap[need];
             for(int i = 0; i < 17; i++){
@@ -69,17 +67,11 @@ int main(){
                 for(int j = 0; j < 17; j++){
                     int bits = i+j;
                     long long freq = leftWays[leftIndex][i]*rightWays[rightIndex][j];
-                    //cout << freq << endl;
                     ret = (ret+(freq%MOD)*factorial[bits])%MOD;
                 }
             }
-            //cout << endl;
         }
         cout << ret << '\n';
     }
-    /*for(int i = 0; i < (1<<16); i++)
-        for(int j = 0; j < 17; j++)
-            if(leftWays[i][j] > 0)
-                cout << i << " " << j << endl;*/
     return 0;
 }
