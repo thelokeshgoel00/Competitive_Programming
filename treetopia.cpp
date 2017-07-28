@@ -70,8 +70,12 @@ int main(){
     dfsTwo(1, 0, 0);
     if(centers.size() == 1){
         pathLength = 2*bestRemoteness;
-        for(int i = 0; i < adjacency[centers[0]].size(); i++) counter += countIt(adjacency[centers[0]][i], centers[0], bestRemoteness-1);
-        counter = counter*(counter-1)/2;
+        long long runningSum = 0;
+        for(int i = 0; i < adjacency[centers[0]].size(); i++){
+            long long add = countIt(adjacency[centers[0]][i], centers[0], bestRemoteness-1);
+            counter += add*runningSum;
+            runningSum += add;
+        }
     }
     else{
         pathLength = 2*bestRemoteness-1;
