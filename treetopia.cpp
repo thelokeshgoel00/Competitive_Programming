@@ -81,6 +81,6 @@ int main(){
         pathLength = 2*bestRemoteness-1;
         counter = countIt(centers[0], centers[1], bestRemoteness-1)*countIt(centers[1], centers[0], bestRemoteness-1);
     }
-    cout << pathLength << " " << counter << '\n';
+    cout << pathLength << " " << max(1ll, counter) << '\n';
     return 0;
 }
