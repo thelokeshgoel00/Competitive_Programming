@@ -1,3 +1,9 @@
+/*
+ID: vamaddu1
+PROG: starry
+LANG: C++11
+*/
+
 #define __USE_MINGW_ANSI_STDIO 0
 #include <iostream>
 #include <stdio.h>
