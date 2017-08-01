@@ -41,7 +41,7 @@ int recurse(int curr){
 }
 
 int main(){
-    //freopen("milk4.in", "r", stdin); freopen("milk4.out", "w", stdout);
+    freopen("milk4.in", "r", stdin); freopen("milk4.out", "w", stdout);
     cin >> Q >> P;
     for(int i = 0; i < P; i++){
         int x; cin >> x;
