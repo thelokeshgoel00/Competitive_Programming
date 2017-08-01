@@ -19,31 +19,41 @@ LANG: C++11
 
 using namespace std;
 
-int Q, P;
+int Q, P, minUse;
 vector<int> pails;
-set<int> needed [20001];
-bool reachable [20001];
+set<int> used;
+bool dp [20010];
+
+int recurse(int curr){
+    if(minUse == used.size()){
+        memset(dp, false, sizeof(dp)); dp[0] = true;
+        for(int i : used)
+            for(int j = i; j <= Q; j++)
+                dp[j] = dp[j] || dp[j-i];
+        return dp[Q];
+    }
+    if(curr == P) return false;
+    used.insert(pails[curr]);
+    if(recurse(curr+1)) return true;
+    used.erase(pails[curr]);
+    if(recurse(curr+1)) return true;
+    return false;
+}
 
 int main(){
-    freopen("milk4.in", "r", stdin); freopen("milk4.out", "w", stdout);
-    cin >> Q >> P; memset(reachable, false, sizeof(reachable)); reachable[0] = true;
+    //freopen("milk4.in", "r", stdin); freopen("milk4.out", "w", stdout);
+    cin >> Q >> P;
     for(int i = 0; i < P; i++){
         int x; cin >> x;
-        pails.push_back(x);
+        used.insert(x);
     }
+    for(int i : used) pails.push_back(i);
     sort(pails.begin(), pails.end());
-    for(int i = 0; i < P; i++)
-        for(int j = 0; j <= Q-pails[i]; j++){
-            if(!reachable[j]) continue;
-            if(!reachable[j+pails[i]] || (reachable[j+pails[i]] && needed[j].size()+1 < needed[j+pails[i]].size())){
-                needed[j+pails[i]].clear();
-                for(int x : needed[j]) needed[j+pails[i]].insert(x);
-                needed[j+pails[i]].insert(pails[i]);
-            }
-            reachable[j+pails[i]] = true;
-        }
-    cout << needed[Q].size();
-    for(int i : needed[Q]) cout << " " << i;
+    P = pails.size(); used.clear();
+    for(minUse = 1; minUse < P+1; minUse++)
+        if(recurse(0)) break;
+    cout << minUse;
+    for(int i : used) cout << " " << i;
     cout << '\n';
     return 0;
 }
