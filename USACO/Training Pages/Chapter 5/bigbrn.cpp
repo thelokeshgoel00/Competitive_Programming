@@ -26,8 +26,8 @@ int main(){
     freopen("bigbrn.in", "r", stdin); freopen("bigbrn.out", "w", stdout);
     cin >> len >> numTrees; 
     for(int i = 1; i <= len; i++)
-      for(int j = 1; j <= len; j++)
-        dp[i][j]= 1;
+        for(int j = 1; j <= len; j++)
+            dp[i][j]= 1;
     for(int i = 0; i < numTrees; i++){
         int a, b; cin >> a >> b;
         dp[a][b] = 0;
