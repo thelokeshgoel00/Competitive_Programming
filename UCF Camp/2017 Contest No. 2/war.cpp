@@ -29,7 +29,7 @@ bool combine(int x, int y){
 
 int main(){
     int s, e, maxDeg = 0; bool good = true; cin >> s >> e;
-    for(int i = 0; i < 1000; i++){ parents[i] = i; heights[i] == 0; degree[i] = 0; }
+    for(int i = 0; i < 1000; i++){ parents[i] = i; heights[i] = 1; degree[i] = 0; }
     for(int i = 0; i < e; i++){
         int v1, v2; cin >> v1 >> v2;
         combine(v1, v2+s); combine(v1+s, v2);
