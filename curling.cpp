@@ -38,7 +38,7 @@ bool collinear(Point a, Point b, Point c){
 bool smallerAngle(Point a, Point b){
     double anga = atan2(a.y-start.y, a.x-start.x), angb = atan2(b.y-start.y, b.x-start.x);
     if(collinear(start, a, b) && fabs(angb-anga) < epsilon)
-        return dist(start, a) <= dist(start, b) ? 0 : 1;
+        return dist(start, a) > dist(start, b) ? 0 : 1;
     return anga > angb ? 0 : 1;
 }
 
@@ -69,7 +69,7 @@ int findHull(Point points [50010], Point hull [50010]){
         while(top >= 1 && !ccw(hull[top-1], hull[top], points[i])) top--;
         top++; hull[top].x = points[i].x; hull[top].y = points[i].y;
     }
-    return top;
+    return top+1;
 }
 
 double area(Point a, Point b, Point c){ return fabs(a.x*(b.y-c.y)+b.x*(c.y-a.y)+c.x*(a.y-b.y))/2.0; }
@@ -111,6 +111,7 @@ int main(){
         dupeB[i].x = oriB[i].x; dupeB[i].y = oriB[i].y;
     }
     numHullA = findHull(dupeA, hullA); numHullB = findHull(dupeB, hullB);
+    //for(int i = 0; i < numHullA; i++) cout << hullA[i].x << " " << hullA[i].y << endl;
     cout << solveIt(oriB, hullA, numHullA) << " " << solveIt(oriA, hullB, numHullB) << '\n';
     return 0;
 }
