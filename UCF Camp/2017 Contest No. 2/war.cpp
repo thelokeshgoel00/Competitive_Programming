@@ -14,7 +14,6 @@ int parents [1000], heights [1000], degree [1000];
 int findParent(int x){
     if(x == parents[x]) return x;
     parents[x] = findParent(parents[x]);
-    heights[x] = 1;
     return parents[x];
 }
 
