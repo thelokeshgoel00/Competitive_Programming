@@ -15,7 +15,7 @@ using namespace std;
 
 #define MOD 1000000007
 
-int n, k, arr [2010], pow2 [] = {1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096};
+int n, k, arr [2010], pow2 [] = {1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192};
 long long dp [2010][4096];
 
 int transformIt(int mask, int next){
