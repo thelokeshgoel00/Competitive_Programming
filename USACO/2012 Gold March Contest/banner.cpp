@@ -21,7 +21,11 @@ using namespace std;
 long long M, N, L, H, B, ret = 0ll;
 vector<long long> primeDiv [100010];
 
-long long calcIt(long long lo, long long hi, long long prod){
+// (# of rectangles with length a multiple of prod assuming they can hang off the grid)-
+//     (# of rectangles that do hang off the grid with length a multiple of prod)
+// Simplified version of (Sum From i = 0 to hi of (M+1-i*prod)) - (Sum From i = 0 to (lo-1) of (M+1-i*prod))
+
+long long calcIt(long long lo, long long hi, long long prod){ 
     hi /= prod;
     lo = (lo+prod-1)/prod;
     return ((hi-lo+1)*(M+1)-prod*(hi*(hi+1)-(lo-1)*lo)/2)%B;
