@@ -1,3 +1,9 @@
+/*
+ID: vamaddu1
+LANG: C++11
+TASK: kimbits
+ */
+
 #define __USE_MINGW_ANSI_STDIO 0
 #include <iostream>
 #include <stdio.h>
@@ -18,13 +24,13 @@ using namespace std;
 #define INF 1000000000000
 #define MOD 1000000007
 
-int N, L, I;
-long long combo [32][32];
+int N, L;
+long long combo [32][32], I;
 string ret = "";
 
 int main(){
-    //freopen("grassplant.in", "r", stdin); freopen("grassplant.out", "w", stdout);
-    scanf("%d %d %d", &N, &L, &I); memset(combo, 0ll, sizeof(combo));
+    freopen("kimbits.in", "r", stdin); freopen("kimbits.out", "w", stdout);
+    scanf("%d %d %lld", &N, &L, &I); memset(combo, 0ll, sizeof(combo));
     for(int i = 0; i < 32; i++) combo[i][0] = combo[0][i] = 1;
     for(int i = 1; i < 32; i++)
         for(int j = 1; j < 32; j++)
