@@ -6,38 +6,34 @@
 
 using namespace std;
 
-struct BIT{
-    int maxi;
-    long long tree [200002];
-    BIT(int m): maxi(m) {}
-    void add(int pos, long long x){
-        while(pos <= maxi){
-            tree[pos] += x;
-            pos += (pos&-pos);
-        }
-    }
-    long long query(int pos){
-        long long sum = 0ll;
-        while(pos > 0){
-            sum += tree[pos];
-            pos -= (pos&-pos);
-        }
-        return sum;
-    }
-};
+int numCows, goal, curr = 100003;
+long long tree [200010], ret = 0ll;
 
-int numCows, goal, curr = 100001;
-long long ret = 0;
+void add(int pos, long long x){
+    while(pos <= 200010){
+        tree[pos] += x;
+        pos += (pos&-pos);
+    }
+}
+
+long long query(int pos){
+    long long sum = 0ll;
+    while(pos > 0){
+        sum += tree[pos];
+        pos -= (pos&-pos);
+    }
+    return sum;
+}
 
 int main(){
     freopen("median.in", "r", stdin); freopen("median.out", "w", stdout);
     scanf("%d %d", &numCows, &goal);
-    BIT fenwick(200001); fenwick.add(curr, 1);
+    add(curr, 1ll);
     for(int i = 1; i <= numCows; i++){
         int x; scanf("%d", &x);
         if(x < goal) curr--;
         else curr++;
-        ret += fenwick.query(curr); fenwick.add(curr, 1);
+        ret += query(curr); add(curr, 1ll);
     }
     cout << ret << endl;
     return 0;
