@@ -6,6 +6,7 @@
 #include <queue>
 #include <set>
 #include <stack>
+#include <deque>
 #include <string.h>
 
 using namespace std;
