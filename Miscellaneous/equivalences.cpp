@@ -8,6 +8,7 @@
 #include <map>
 #include <set>
 #include <stack>
+#include <deque>
 #include <string.h>
 #include <math.h>
 
