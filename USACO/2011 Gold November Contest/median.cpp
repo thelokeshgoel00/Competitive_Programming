@@ -10,7 +10,7 @@ int numCows, goal, curr = 100003;
 long long tree [200010], ret = 0ll;
 
 void add(int pos, long long x){
-    while(pos <= 200010){
+    while(pos < 200010){
         tree[pos] += x;
         pos += (pos&-pos);
     }
