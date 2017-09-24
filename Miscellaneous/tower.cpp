@@ -1,5 +1,7 @@
 #include <iostream>
 #include <algorithm>
+#include <vector>
+
 int main(){
   int numCubes, tolerance;
   long long mod = 1000000009ll, res = 1ll;
