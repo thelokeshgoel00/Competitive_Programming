@@ -26,7 +26,6 @@ long long arr [200010], currSum = 0, ret = 0;
 deque<pair<long long, long long>> dq;
 
 int main(){
-    //freopen("art2.in", "r", stdin); freopen("art2.out", "w", stdout);
     ios_base::sync_with_stdio(false); cin.tie(NULL);
     cin >> N >> K;
     for(int i = 0; i < N; i++){ cin >> arr[i]; arr[i+N] = arr[i]; }
