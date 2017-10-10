@@ -1,9 +1,18 @@
+#define __USE_MINGW_ANSI_STDIO 0
 #include <iostream>
-#include <fstream>
-#include <string>
+#include <stdio.h>
+#include <stdlib.h>
 #include <vector>
 #include <algorithm>
+#include <queue>
+#include <map>
+#include <unordered_map>
+#include <set>
+#include <unordered_set>
+#include <stack>
+#include <deque>
 #include <string.h>
+#include <math.h>
 
 using namespace std;
 
