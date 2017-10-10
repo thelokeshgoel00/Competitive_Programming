@@ -37,14 +37,14 @@ int main(){
     cin >> N >> M;
     for(int i = 0; i < N; i++){
         char winnie; double a1, a2, a3, b1, b2, b3;
-		    cin >> winnie >> a1 >> a2 >> a3 >> b1 >> b2 >> b3;
-		    if(winnie == 'J') lines[i] = {{a1-b1, a2-b2}, a3-b3};
-		    else lines[i] = {{b1-a1, b2-a2}, b3-a3};
+		cin >> winnie >> a1 >> a2 >> a3 >> b1 >> b2 >> b3;
+		if(winnie == 'J') lines[i] = {{a1-b1, a2-b2}, a3-b3};
+		else lines[i] = {{b1-a1, b2-a2}, b3-a3};
     }
     lines[N++] = {{100.0, 0.0}, -1.0}; lines[N++] = {{0.0, 100.0}, -1.0};
     lines[N++] = {{-1.0, 0.0}, 100.0};  lines[N++] = {{0.0, -1.0}, 100.0};
-	  lines[N++] = {{-1.0, 100.0}, 0.0}; lines[N++] = {{100.0, -1.0}, 0.0};
-	  for(int i = 0; i < N; i++)
+	lines[N++] = {{-1.0, 100.0}, 0.0}; lines[N++] = {{100.0, -1.0}, 0.0};
+	for(int i = 0; i < N; i++)
         for(int j = i+1; j < N; j++){
             pair<double, double> now = solve(lines[i], lines[j]);
             if(now.first == INF) continue;
@@ -58,17 +58,17 @@ int main(){
         }
     for(int i = 0; i < M; i++){
         double a1, a2, a3, b1, b2, b3;
-        cin >> a1 >> a2 >> a3 >> b1 >> b2 >> b3;
-		    bool johnWin = false, bessieWin = false;
-		    for(int j = 0; j < vertices.size(); j++){
+		cin >> a1 >> a2 >> a3 >> b1 >> b2 >> b3;
+		bool johnWin = false, bessieWin = false;
+		for(int j = 0; j < vertices.size(); j++){
             double comp = vertices[j].first*(a1-b1)+vertices[j].second*(a2-b2)+(a3-b3);
             if(comp <= epsilon) bessieWin = true;
             if(comp >= -epsilon) johnWin = true;
-        }
-        if(bessieWin && johnWin) cout << "U\n";
-        else if(bessieWin) cout << "B\n";
-        else if(johnWin) cout << "J\n";
-        else cerr << "Oops!...I Did It Again\n";
+		}
+		if(bessieWin && johnWin) cout << "U\n";
+		else if(bessieWin) cout << "B\n";
+		else if(johnWin) cout << "J\n";
+		else cerr << "Oops!...I Did It Again\n";
     }
     return 0;
 }
