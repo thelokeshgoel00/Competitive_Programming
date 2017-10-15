@@ -1,11 +1,26 @@
+#define __USE_MINGW_ANSI_STDIO 0
 #include <iostream>
+#include <iomanip>
 #include <stdio.h>
 #include <stdlib.h>
-#include <algorithm>
 #include <vector>
+#include <algorithm>
+#include <queue>
+#include <map>
+#include <unordered_map>
 #include <set>
+#include <unordered_set>
+#include <stack>
+#include <deque>
+#include <string.h>
+#include <math.h>
 
 using namespace std;
+
+#define PI 4.0*atan(1.0)
+#define epsilon 0.000000001
+#define INF 1000000000000000000
+#define MOD 1000000007
 
 struct Frog{
     long long pos, reach;
