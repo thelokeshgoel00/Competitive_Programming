@@ -16,6 +16,7 @@ int main(){
         cin >> temp;
         if(temp == 0ll) break;
         cout << (temp+1)*(temp+2)*(temp)/6 << '\n';
+        // https://math.stackexchange.com/questions/376284/sum-of-the-first-n-triangular-numbers-induction
     }
     return 0;
 }
