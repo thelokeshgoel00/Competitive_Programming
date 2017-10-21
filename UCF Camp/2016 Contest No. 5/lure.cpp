@@ -44,9 +44,8 @@ long go(long type, long now, long from){
 }
 int main(){
     cin >> n;
-    for(long i = 1; i<n; i++){
-        long a, b; cin >> a >> b;
-        a--; b--;
+    for(long i = 1; i < n; i++){
+        long a, b; cin >> a >> b; a--; b--;
         adjacency[a].push_back(b); adjacency[b].push_back(a);
     }
     memset(dp, -1, sizeof(dp));
