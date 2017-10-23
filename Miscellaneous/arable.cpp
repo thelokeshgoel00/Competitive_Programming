@@ -1,3 +1,5 @@
+//http://www.problemvault.com/#problem130
+
 #define __USE_MINGW_ANSI_STDIO 0
 #include <iostream>
 #include <iomanip>
@@ -109,5 +111,3 @@ int main(){
     }
     return 0;
 }
-
-//http://www.problemvault.com/#problem130
