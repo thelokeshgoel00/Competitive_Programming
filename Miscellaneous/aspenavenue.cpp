@@ -26,7 +26,6 @@ int N;
 double L, W, oriPos [2010], dp [1010][1010];
 
 int main(){
-    //freopen("odometer.in", "r", stdin); freopen("odometer.out", "w", stdout);
     ios_base::sync_with_stdio(0); cin.tie(0); cout << fixed << setprecision(18);
     cin >> N >> L >> W;
     for(int i = 1; i <= N; i++) cin >> oriPos[i];
