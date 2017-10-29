@@ -7,4 +7,4 @@
 :heavy_check_mark: hayturn <br>
 :heavy_check_mark: palin <br>
 :heavy_check_mark: stringsobits <br>
-:heavy_check_mark: treasure <br>
+:heavy_check_mark: treasure
