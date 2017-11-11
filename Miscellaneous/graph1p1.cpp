@@ -64,3 +64,9 @@ int main(){
     cout << summy << '\n';
     return 0;
 }
+
+// Fibonacci Q-Matrix
+// F_2   F_1
+// F_1   F_0
+// 1     1
+// 1     0
