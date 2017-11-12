@@ -56,12 +56,9 @@ int main(){
         cin >> degree[i];
         total += degree[i];
     }
-    for(int i = 0; i < N+1; i++){
-        if(degree[i] > N-1) continue;
-        if(total-degree[i] > N*(N-1)) continue;
+    for(int i = 0; i < N+1; i++)
         if((total-degree[i])%2 == 0 && checkIt(i))
             ret.push_back(i+1);
-    }
     cout << ret.size() << endl;
     for(int i = 0; i < ret.size(); i++) cout << ret[i] << '\n';
     return 0;
