@@ -72,7 +72,7 @@ int main(){
         }
         groups[groupNum] = temp; groupNum++;
     }
-    for(int i = 0; i < C; i++){
+    for(int k = 0; k < C; k++){
         pair<int, int> cow; scanf("%d %d", &cow.first, &cow.second);
         string s = ""; for(int i = 0; i < groupNum; i++) s += '0';
         for(int j = 0; j < groupNum; j++){
