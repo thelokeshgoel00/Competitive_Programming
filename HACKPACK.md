@@ -40,6 +40,7 @@ The niche problem implementations I currently bring to competitions are listed b
 * [Count the Number of Unit Squares Fully Inside a Polygon](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/arable.cpp)
 * [Number of Permutations With No Two Adjacent Equal Elements](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/distinctneighbours.cpp)
 * [Minimum Weight of a Complete Graph Given a Unique Spanning Tree](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/invent.cpp)
+* [Rearrange Elements in a Matrix to Make All Rows and Columns Palindromes](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/palinmatrix.cpp)
 * [Number of Ways to Tile a 3 by N Grid With 2 by 1 Dominoes](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2017%20Contest%20No.%207/sticks.cpp)
 * [Number of Ways to Tile Any Grid With 2 by 1 Dominoes](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/tilingdominoes.cpp)
 * [Querying the Farthest Node From Any Node on a Tree](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/tunnels.cpp)
@@ -54,5 +55,4 @@ The niche problem implementations I currently bring to competitions are listed b
 
 Other useful implementations that do not fall under any of the three categories above are listed below.
 * [Segment Tree With Dijkstra's Algorithm](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF787D.cpp)
-* [Rearrange Elements in a Matrix to Make All Rows and Columns Palindromes](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/palinmatrix.cpp)
 * [Dynamic Programming on a DAG of SCCs](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/raider.cpp)
