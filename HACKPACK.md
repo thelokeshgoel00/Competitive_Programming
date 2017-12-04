@@ -9,7 +9,7 @@ The algorithm and special technique implementations I currently bring to competi
 * [Finding Bridges and 2ECCs](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Advanced%20Graph%20Algorithms%202/rpaths/sol.cpp)
 * [2D Convex Hull](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Computational%20Geometry%202/moat/sol.cpp)
 * [Dinic's Max Flow (Slower to Implement, Faster to Run) in Finding the Maximum Independent Set](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2011%20Gold%20November%20Contest/steeple.cpp)
-* [Edmonds–Karp Max Flow (Faster to Implement, Slower to Run) in Minimum Cut Problem] (https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Training%20Pages/Chapter%205/telecow.cpp)
+* [Edmonds–Karp Max Flow (Faster to Implement, Slower to Run) in Minimum Cut Problem](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Training%20Pages/Chapter%205/telecow.cpp)
 * [Hashing Technique](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Advanced%20Data%20Structures/patterns/sol.cpp)
 * [Kruskal's MST](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/blazingnewtrails.cpp)
 * [Fast Lowest Common Ancestor](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2015%20Platinum%20December%20Contest/maxflow.cpp)
