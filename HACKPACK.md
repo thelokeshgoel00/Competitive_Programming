@@ -18,6 +18,7 @@ The algorithm and special technique implementations I currently bring to competi
 * [Fast Lowest Common Ancestor](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2015%20Platinum%20December%20Contest/maxflow.cpp)
 * [Fast Matrix Exponentiation](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/graph1p1.cpp)
 * [Euclidean Modular Inverse](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF101532E.cpp)
+* [Prim's MST](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/androids.cpp) 
 * [Finding Strongly Connected Components](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Training%20Pages/Chapter%205/schlnet.cpp)
 * [Traveling Salesman Problem](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2013%20Gold%20January%20Contest/island.cpp)
 
