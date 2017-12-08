@@ -14,7 +14,7 @@ The algorithm and special technique implementations I currently bring to competi
 * [Edmonds–Karp Max Flow (Faster to Implement, Slower to Run) in Minimum Cut Problem](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Training%20Pages/Chapter%205/telecow.cpp)
 * [Hashing Technique](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Advanced%20Data%20Structures/patterns/sol.cpp)
 * [Kruskal's MST](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/blazingnewtrails.cpp)
-* [Fast Longest Increasing Subsequence](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/princeandprincess.cpp)
+* [Fast Longest Increasing Subsequence](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/longincsubseq.cpp)
 * [Fast Lowest Common Ancestor](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2015%20Platinum%20December%20Contest/maxflow.cpp)
 * [Fast Matrix Exponentiation](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/graph1p1.cpp)
 * [Euclidean Modular Inverse](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF101532E.cpp)
