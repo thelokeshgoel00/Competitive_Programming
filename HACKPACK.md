@@ -28,9 +28,10 @@ The data structure implementations I currently bring to competitions are listed 
 * [Disjoint Set](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2014%20Gold%20January%20Contest/skilevel.cpp)
 * [Classic Fenwick Tree (a.k.a. Binary Indexed Tree or BIT)](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/rotatingcards.cpp)
 * [2D Fenwick Tree](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/matsum.cpp)
+* [Max Queue](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/pizzabag.cpp)
 * [Point Update Segment Tree](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/holygrailwar.cpp)
 * [Lazy Propagation Segment Tree](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2015%20Platinum%20December%20Contest/haybales.cpp)
-* [Max Queue](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/pizzabag.cpp)
+* [Trie](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2012%20Gold%20December%20Contest/first.cpp)
 
 ### Niche Problems
 
