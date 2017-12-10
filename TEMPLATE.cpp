@@ -13,17 +13,18 @@
 #include <stack>
 #include <deque>
 #include <string.h>
+#include <sstream>
 #include <math.h>
 
 using namespace std;
 
-#define PI 4.0*atan(1.0)
+#define PI atan2(0, -1)
 #define epsilon 0.000000001
 #define INF 1000000000000000000
 #define MOD 1000000007
 
 int main(){
-    //freopen("fortmoo.in", "r", stdin); freopen("fortmoo.out", "w", stdout);
+    //freopen("mowing.in", "r", stdin); freopen("mowing.out", "w", stdout);
     ios_base::sync_with_stdio(0); cin.tie(0); cout << fixed << setprecision(18);
 
     return 0;
