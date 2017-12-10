@@ -81,7 +81,7 @@ struct SegBit{
 int N, T, hindex = 0, vindex = 0, ret = 0;
 pair<int, int> points [100010];
 vector<pair<pair<int, int>, pair<int, int>>> horizontalEvents, verticalQueries;
-SegBit sb; // horizontal dimension of time and vertical dimension of x's
+SegBit sb; // horizontal dimension of time and vertical dimension of y's
 
 int main(){
     freopen("mowing.in", "r", stdin); freopen("mowing.out", "w", stdout);
