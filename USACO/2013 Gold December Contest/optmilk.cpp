@@ -11,6 +11,10 @@ using namespace std;
 struct Node{
     long long pp, pb, bp, bb;
     Node(){ pp = 0; pb = 0; bp = 0; bb = 0; }
+    // pp = max when both endpoints cannot be used
+    // pb = max when only the right endpoint can be used
+    // bp = max when only the left endpoint can be used
+    // bb = max when both endpoints can be used
 };
 
 int N, D;
