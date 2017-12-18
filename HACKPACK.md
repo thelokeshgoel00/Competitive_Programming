@@ -58,5 +58,6 @@ The niche problem implementations I currently bring to competitions are listed b
 ### Miscellaneous
 
 Other useful implementations that do not fall under any of the three categories above are listed below.
+* [Digit Dynamic Programming](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2014%20Silver%20US%20Open%20Contest/odometer.cpp)
 * [Segment Tree With Dijkstra's Algorithm](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF787D.cpp)
 * [Dynamic Programming on a DAG of SCCs](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/raider.cpp)
