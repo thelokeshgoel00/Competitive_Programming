@@ -10,7 +10,6 @@
 #include <unordered_map>
 #include <set>
 #include <unordered_set>
-#include <stack>
 #include <deque>
 #include <string.h>
 #include <sstream>
