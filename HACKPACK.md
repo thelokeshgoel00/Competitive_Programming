@@ -37,6 +37,7 @@ The data structure implementations I currently bring to competitions are listed 
 ### Niche Problems
 
 The niche problem implementations I currently bring to competitions are listed below.
+* [Finding Intersections of Line Segments](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/crisscross.cpp)
 * [Number of Permutations of a String Lexicographically Less Than Another String](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF895D.cpp)
 * [Finding the Max Clique](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF839E.cpp)
 * [Maximizing the Number of Disjoint Pairs of Connected Edges](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF860D.cpp)
