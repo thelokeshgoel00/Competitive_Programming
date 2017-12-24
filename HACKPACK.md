@@ -32,6 +32,7 @@ The data structure implementations I currently bring to competitions are listed 
 * [Max Queue](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/pizzabag.cpp)
 * [Point Update Segment Tree](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/holygrailwar.cpp)
 * [Lazy Propagation Segment Tree](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2015%20Platinum%20December%20Contest/haybales.cpp)
+* [BIT of Dynamic Segment Trees](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2016%20Platinum%20January%20Contest/mowing.cpp)
 * [Trie](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2012%20Gold%20December%20Contest/first.cpp)
 
 ### Niche Problems
