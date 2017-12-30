@@ -20,7 +20,7 @@ using namespace std;
 
 #define PI atan2(0, -1)
 #define epsilon 0.000000001
-#define INF 1000000000000000000
+#define INF 5000000000000000000
 #define MOD 1000000007
 
 int main(){
