@@ -22,6 +22,7 @@ The algorithm and special technique implementations I currently bring to competi
 * [Euclidean Modular Inverse](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF101532E.cpp)
 * [Prim's MST](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/androids.cpp) 
 * [Finding Strongly Connected Components](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Training%20Pages/Chapter%205/schlnet.cpp)
+* [Ternary Search](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/jewelrybox.cpp)
 * [Traveling Salesman Problem](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2013%20Gold%20January%20Contest/island.cpp)
 
 ### Data Structures
