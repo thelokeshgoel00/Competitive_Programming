@@ -17,7 +17,7 @@ The algorithm and special technique implementations I currently bring to competi
 * [Hashing Technique](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Advanced%20Data%20Structures/patterns/sol.cpp)
 * [Kruskal's MST](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/minspantree.cpp)
 * [Fast Longest Increasing Subsequence](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/longincsubseq.cpp)
-* [Fast Lowest Common Ancestor](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2015%20Platinum%20December%20Contest/maxflow.cpp)
+* [Fast Lowest Common Ancestor](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Advanced%20Searching%20Techniques%201/cowpol/sol.cpp)
 * [Fast Matrix Exponentiation](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/graph1p1.cpp)
 * [Euclidean Modular Inverse](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF101532E.cpp)
 * [Prim's MST](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/androids.cpp)
