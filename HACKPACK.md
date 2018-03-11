@@ -60,6 +60,7 @@ The niche problem implementations I currently bring to competitions are listed b
 * [Counting the Number of Topological Sorts](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2017%20Contest%20No.%202/story.cpp)
 * [Generating the Nth Lexicographically Smallest Subset](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2017%20Contest%20No.%204/combos.cpp)
 * [Counting Derangements of Pairings](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2017%20Contest%20No.%207/morecombos.cpp)
+* [Maximum Sum Rectangle in a Matrix](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/maxsumrect.cpp)
 
 ### Miscellaneous
 
