@@ -9,6 +9,7 @@ The algorithm and special technique implementations I currently bring to competi
 * [Finding Articulation Points and 2VCCs](https://gist.github.com/vmaddur/7f83bf412e166de4fb2d54836af646fc)
 * [Bellman–Ford With Check for Negative Weight Cycles](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Advanced%20Graph%20Algorithms%202/bigmac/sol.cpp)
 * [Finding Bridges and 2ECCs](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Advanced%20Graph%20Algorithms%202/rpaths/sol.cpp)
+* [Centroid Decomposition of a Tree](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2017%20Contest%20No.%203/cycles.cpp)
 * [Static 2D Convex Hull](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Computational%20Geometry%202/moat/sol.cpp)
 * [Incremental 2D Convex Hull](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2015%20Gold%20February%20Contest/fencing.cpp)
 * [Convex Hull Trick](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/acquire.cpp)
@@ -43,6 +44,7 @@ The data structure implementations I currently bring to competitions are listed 
 
 The niche problem implementations I currently bring to competitions are listed below.
 * [Finding Intersections of Line Segments](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/crisscross.cpp)
+* [Checking if a Point is Inside a Polygon](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Computational%20Geometry%201/crazy/sol.cpp)
 * [Number of Permutations of a String Lexicographically Less Than Another String](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF895D.cpp)
 * [Finding the Max Clique](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF839E.cpp)
 * [Maximizing the Number of Disjoint Pairs of Connected Edges](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF860D.cpp)
