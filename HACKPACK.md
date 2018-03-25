@@ -50,6 +50,7 @@ The niche problem implementations I currently bring to competitions are listed b
 * [Maximizing the Number of Disjoint Pairs of Connected Edges](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF860D.cpp)
 * [Count the Number of Unit Squares Fully Inside a Polygon](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/arable.cpp)
 * [Escaping a Circular Perimeter (Classic Game Theory)](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/catmouse.cpp)
+* [Check if a Binary Matrix With Given Row and Column Sums Exists](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/tomography.cpp)
 * [Number of Permutations With No Two Adjacent Equal Elements](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/distinctneighbours.cpp)
 * [Minimum Weight of a Complete Graph Given a Unique Spanning Tree](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/invent.cpp)
 * [Rearrange Elements in a Matrix to Make All Rows and Columns Palindromes](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/palinmatrix.cpp)
