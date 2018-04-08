@@ -58,6 +58,7 @@ The niche problem implementations I currently bring to competitions are listed b
 * [Rearrange Elements in a Matrix to Make All Rows and Columns Palindromes](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/palinmatrix.cpp)
 * [Number of Ways to Tile a 3 by N Grid With 2 by 1 Dominoes](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2017%20Contest%20No.%207/sticks.cpp)
 * [Number of Ways to Tile Any Grid With 2 by 1 Dominoes](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/tilingdominoes.cpp)
+* [Moves Left in Tower of Hanoi Puzzle](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/endoftheworld.cpp)
 * [Querying the Farthest Node From Any Node on a Tree](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/tunnels.cpp)
 * [Finding the Kth Largest Element With a Fenwick Tree](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/wowow.cpp)
 * [Finding the Length and Number of Diameters in a Tree](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2016%20Contest%20No.%203/treetopia.cpp)
