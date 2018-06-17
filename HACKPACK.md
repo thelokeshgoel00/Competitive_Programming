@@ -5,14 +5,16 @@ A "hackpack" is a compilation of implementations of various algorithms, data str
 ### Algorithms and Other Specialized Problem Solving Techniques
 
 The algorithm and special technique implementations I currently bring to competitions are listed below.
-* [0-1 BFS](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/jailbreak.cpp)
 * [Finding Articulation Points and 2VCCs](https://gist.github.com/vmaddur/7f83bf412e166de4fb2d54836af646fc)
 * [Bellman–Ford With Check for Negative Weight Cycles](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Advanced%20Graph%20Algorithms%202/bigmac/sol.cpp)
+* [General BFS Technique](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2017%20Contest%20No.%203/geography.cpp)
+* [0-1 BFS](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/jailbreak.cpp)
 * [Finding Bridges and 2ECCs](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Advanced%20Graph%20Algorithms%202/rpaths/sol.cpp)
 * [Centroid Decomposition of a Tree](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2017%20Contest%20No.%203/cycles.cpp)
 * [Static 2D Convex Hull](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Computational%20Geometry%202/moat/sol.cpp)
 * [Incremental 2D Convex Hull](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2015%20Gold%20February%20Contest/fencing.cpp)
 * [Convex Hull Trick](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/acquire.cpp)
+* [General DFS Technique](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2017%20Contest%20No.%203/upgrade.cpp)
 * [Dijkstra's Single Source Shortest Path](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2014%20Silver%20US%20Open%20Contest/gpsduel.cpp)
 * [Dinic's Max Flow (Slower to Implement, Faster to Run) in Finding the Maximum Independent Set](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2011%20Gold%20November%20Contest/steeple.cpp)
 * [Edmonds–Karp Max Flow (Faster to Implement, Slower to Run) in Minimum Cut Problem](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Training%20Pages/Chapter%205/telecow.cpp)
