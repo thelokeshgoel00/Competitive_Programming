@@ -6,6 +6,7 @@ A "hackpack" is a compilation of implementations of various algorithms, data str
 
 The algorithm and special technique implementations I currently bring to competitions are listed below.
 * [Finding Articulation Points and 2VCCs](https://gist.github.com/vmaddur/7f83bf412e166de4fb2d54836af646fc)
+* [Classic Backtracking](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2017%20Contest%20No.%204/nqueens.cpp)
 * [Bellman–Ford With Check for Negative Weight Cycles](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Advanced%20Graph%20Algorithms%202/bigmac/sol.cpp)
 * [General BFS Technique](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2017%20Contest%20No.%203/geography.cpp)
 * [0-1 BFS](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/jailbreak.cpp)
