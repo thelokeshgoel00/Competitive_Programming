@@ -22,6 +22,7 @@ The algorithm and special technique implementations I currently bring to competi
 * [Floyd-Warshall All Pairs Shortest Path](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/humancannonball.cpp)
 * [Hashing Technique](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Advanced%20Data%20Structures/patterns/sol.cpp)
 * [Heavy Light Decomposition](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2018%20Platinum%20US%20Open%20Contest/disrupt.cpp)
+* [Knuth–Morris–Pratt String-Searching](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2018%20Contest%20No.%202/test.cpp)
 * [Kruskal's MST](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/minspantree.cpp)
 * [Fast Longest Increasing Subsequence](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/longincsubseq.cpp)
 * [Fast Lowest Common Ancestor](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Advanced%20Searching%20Techniques%201/cowpol/sol.cpp)
