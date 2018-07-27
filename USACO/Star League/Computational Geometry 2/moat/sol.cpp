@@ -31,7 +31,7 @@ struct Point{
 };
 
 int N, numHull;
-Point start, ori [5010], hull [5010];
+Point start, ori [50010], hull [50010];
 double ret = 0.0;
 
 double dist(Point a, Point b){ return sqrt(pow(a.x-b.x, 2)+pow(a.y-b.y, 2)); }
@@ -64,7 +64,7 @@ int findHull(Point points [50010], Point hull [50010]){
     int top = 1, n = N;
     if(n <= 3){
         for(int i = 0; i < n; i++){ hull[i].x = points[i].x; hull[i].y = points[i].y; }
-        hull[n].y = points[0].x; hull[n].y = points[0].y;
+        hull[n].x = points[0].x; hull[n].y = points[0].y;
         return n;
     }
     n -= removeDupe(points);
