@@ -54,6 +54,7 @@ The data structure implementations I currently bring to competitions are listed 
 
 The niche problem implementations I currently bring to competitions are listed below.
 * [Finding Intersections of Line Segments](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/crisscross.cpp)
+* [Counting the Number of Intersections Between Horizontal and Vertical Line Segments](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/safebet.cpp)
 * [Checking if a Point is Inside a Polygon](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Computational%20Geometry%201/crazy/sol.cpp)
 * [Number of Permutations of a String Lexicographically Less Than Another String](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF895D.cpp)
 * [Finding the Max Clique](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF839E.cpp)
