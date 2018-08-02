@@ -14,7 +14,9 @@
 #include <deque>
 #include <string.h>
 #include <sstream>
+#include <bitset>
 #include <math.h>
+#include <assert.h>
 
 using namespace std;
 
@@ -23,9 +25,16 @@ using namespace std;
 #define INF 5000000000000000000
 #define MOD 1000000007
 
+#define mp make_pair
+#define pb push_back
+#define f first
+#define s second
+#define lb lower_bound
+#define ub upper_bound
+
 int main(){
-    //freopen("mowing.in", "r", stdin); freopen("mowing.out", "w", stdout);
-    ios_base::sync_with_stdio(0); cin.tie(0); cout << fixed << setprecision(18);
+    //freopen("sort.in", "r", stdin); freopen("sort.out", "w", stdout);
+    ios_base::sync_with_stdio(0); cin.tie(0); cout << fixed << setprecision(2);
 
     return 0;
 }
