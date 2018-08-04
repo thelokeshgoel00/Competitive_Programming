@@ -39,8 +39,8 @@ int main(){
     return 0;
 }
 
-/*
+/******************************
 Kateba ii dake no hanashi darou
 Success is only a victory away
 - No Game No Life Opening
-*/
+******************************/
