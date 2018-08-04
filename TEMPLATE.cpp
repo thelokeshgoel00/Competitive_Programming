@@ -34,7 +34,13 @@ using namespace std;
 
 int main(){
     //freopen("sort.in", "r", stdin); freopen("sort.out", "w", stdout);
-    ios_base::sync_with_stdio(0); cin.tie(0); cout << fixed << setprecision(2);
+    ios_base::sync_with_stdio(0); cin.tie(0); cout << fixed << setprecision(9);
 
     return 0;
 }
+
+/*
+Kateba ii dake no hanashi darou
+Success is only a victory away
+- No Game No Life Opening
+*/
