@@ -17,8 +17,13 @@
 #include <bitset>
 #include <math.h>
 #include <assert.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
 
 using namespace std;
+using namespace __gnu_pbds;
+template <class T> using ordered_set = tree<T, null_type, less<T>, rb_tree_tag,tree_order_statistics_node_update>;
+//template <class T> using ordered_set = tree<T, null_type, less_equal<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
 #define PI atan2(0, -1)
 #define epsilon 0.000000001
@@ -34,7 +39,7 @@ using namespace std;
 
 int main(){
     //freopen("sort.in", "r", stdin); freopen("sort.out", "w", stdout);
-    ios_base::sync_with_stdio(0); cin.tie(0); cout << fixed << setprecision(9);
+    ios_base::sync_with_stdio(0); cin.tie(0); cout << fixed << setprecision(10);
 
     return 0;
 }
