@@ -45,6 +45,7 @@ The data structure implementations I currently bring to competitions are listed 
 * [Classic Fenwick Tree (a.k.a. Binary Indexed Tree or BIT)](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/rotatingcards.cpp)
 * [2D Fenwick Tree](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/matsum.cpp)
 * [Max Queue](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/pizzabag.cpp)
+* [Merge Sort Tree](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF785E.cpp)
 * [Point Update Segment Tree](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/holygrailwar.cpp)
 * [Lazy Propagation Segment Tree](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2015%20Platinum%20December%20Contest/haybales.cpp)
 * [BIT of Dynamic Segment Trees](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2016%20Platinum%20January%20Contest/mowing.cpp)
