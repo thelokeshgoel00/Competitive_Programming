@@ -80,6 +80,7 @@ The niche problem implementations I currently bring to competitions are listed b
 * [Maximum Sum Rectangle in a Matrix](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/maxsumrect.cpp)
 * [Efficient Submask Generation](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/busplanning.cpp)
 * [Longest Increasing Subsequence for Pairs](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/lisii.cpp)
+* [Counting the Number of Minimum Spanning Trees](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/countmsts.cpp)
 
 ### Miscellaneous
 
