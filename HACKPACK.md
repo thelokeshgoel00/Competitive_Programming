@@ -12,6 +12,7 @@ The algorithm and special technique implementations I currently bring to competi
 * [0-1 BFS](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/jailbreak.cpp)
 * [Finding Bridges and 2ECCs](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Advanced%20Graph%20Algorithms%202/rpaths/sol.cpp)
 * [Centroid Decomposition of a Tree](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2017%20Contest%20No.%203/cycles.cpp)
+* [Chinese Remainder Theorem](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/generalchineseremainder.cpp)
 * [Static 2D Convex Hull](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2018%20Contest%20No.%205/forest.cpp)
 * [Incremental 2D Convex Hull](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2015%20Gold%20February%20Contest/fencing.cpp)
 * [Convex Hull Trick](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/acquire.cpp)
