@@ -23,8 +23,8 @@
 using namespace std;
 template <class T>
 using ordered_set = __gnu_pbds::tree<T, __gnu_pbds::null_type, less<T>, __gnu_pbds::rb_tree_tag, __gnu_pbds::tree_order_statistics_node_update>;
-//template <class T>
-//using ordered_set = __gnu_pbds::tree<T, __gnu_pbds::null_type, less_equal<T>, __gnu_pbds::rb_tree_tag, __gnu_pbds::tree_order_statistics_node_update>;
+template <class T>
+using ordered_multiset = __gnu_pbds::tree<T, __gnu_pbds::null_type, less_equal<T>, __gnu_pbds::rb_tree_tag, __gnu_pbds::tree_order_statistics_node_update>;
 
 #define PI atan2(0, -1)
 #define epsilon 0.000000001
@@ -41,7 +41,7 @@ using ordered_set = __gnu_pbds::tree<T, __gnu_pbds::null_type, less<T>, __gnu_pb
 int main(){
     //freopen("sort.in", "r", stdin); freopen("sort.out", "w", stdout);
     ios_base::sync_with_stdio(0); cin.tie(0); cout << fixed << setprecision(10);
-
+    
     return 0;
 }
 
