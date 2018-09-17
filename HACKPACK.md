@@ -7,7 +7,7 @@ A "hackpack" is a compilation of implementations of various algorithms, data str
 The algorithm and special technique implementations I currently bring to competitions are listed below.
 * [Finding Articulation Points and 2VCCs](https://gist.github.com/vmaddur/7f83bf412e166de4fb2d54836af646fc)
 * [Classic Backtracking](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2017%20Contest%20No.%204/nqueens.cpp)
-* [Bellman–Ford With Check for Negative Weight Cycles](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Advanced%20Graph%20Algorithms%202/bigmac/sol.cpp)
+* [Bellman–Ford with Check for Negative Weight Cycles](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Advanced%20Graph%20Algorithms%202/bigmac/sol.cpp)
 * [General BFS Technique](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2017%20Contest%20No.%203/geography.cpp)
 * [0-1 BFS](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/jailbreak.cpp)
 * [Finding Bridges and 2ECCs](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Advanced%20Graph%20Algorithms%202/rpaths/sol.cpp)
@@ -20,7 +20,7 @@ The algorithm and special technique implementations I currently bring to competi
 * [Dijkstra's Single Source Shortest Path](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2014%20Silver%20US%20Open%20Contest/gpsduel.cpp)
 * [Dinic's Max Flow (Slower to Implement, Faster to Run) in Finding the Maximum Independent Set](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2011%20Gold%20November%20Contest/steeple.cpp)
 * [Edmonds–Karp Max Flow (Faster to Implement, Slower to Run) in Minimum Cut Problem](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Training%20Pages/Chapter%205/telecow.cpp)
-* [Floyd-Warshall All Pairs Shortest Path](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/humancannonball.cpp)
+* [Floyd-Warshall All Pairs Shortest Path with Check for Negative Weight Cycles](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/allpairspath.cpp)
 * [Gaussian Elimination](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2018%20Contest%20No.%205/rage.cpp)
 * [Hashing Technique](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Star%20League/Advanced%20Data%20Structures/patterns/sol.cpp)
 * [Heavy Light Decomposition](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2018%20Platinum%20US%20Open%20Contest/disrupt.cpp)
@@ -87,6 +87,6 @@ The niche problem implementations I currently bring to competitions are listed b
 
 Other useful implementations that do not fall under any of the three categories above are listed below.
 * [Digit Dynamic Programming](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2014%20Silver%20US%20Open%20Contest/odometer.cpp)
-* [Segment Tree With Dijkstra's Algorithm](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF787D.cpp)
+* [Segment Tree with Dijkstra's Algorithm](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF787D.cpp)
 * [Dynamic Programming on a DAG of SCCs](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/raider.cpp)
 * [Game Bracket Dynamic Programming](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF859D.cpp)
