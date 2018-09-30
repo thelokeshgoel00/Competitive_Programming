@@ -31,6 +31,7 @@ The algorithm and special technique implementations I currently bring to competi
 * [Markov Chain](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF989E.cpp)
 * [Fast Matrix Exponentiation](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/macarons.cpp)
 * [Meet-in-the-Middle](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2017%20Contest%20No.%207/magicbeans.cpp)
+* [Miller–Rabin Primality Test](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF100753F.cpp)
 * [Euclidean Modular Inverse](https://github.com/vmaddur/Competitive_Programming/blob/master/CodeForces/CF101532E.cpp)
 * [Prime Sieve](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/flowergarden.cpp)
 * [Prim's MST](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/androids.cpp)
