@@ -45,9 +45,9 @@ pair<string, pair<int, int>> arr [100010];
 string hashIt(double x, double y, double s, int level){
     if(level == 0) return "";
     double s2 = s/2.0;
-    if( x<=s2 && y<=s2 ) return 'a' + hashIt( y, x, s2, level-1);
-    else if( x<=s2 && y>s2 ) return 'b' + hashIt( x, y-s2, s2, level-1);
-    else if( x>s2 && y>s2 ) return 'c' + hashIt( x-s2, y-s2, s2, level-1);
+    if(x <= s2 && y <= s2) return 'a' + hashIt( y, x, s2, level-1);
+    else if(x <= s2 && y > s2) return 'b' + hashIt( x, y-s2, s2, level-1);
+    else if(x > s2 && y > s2) return 'c' + hashIt( x-s2, y-s2, s2, level-1);
     else return 'd' + hashIt( s2-y, s-x, s2, level-1);
 }
 
