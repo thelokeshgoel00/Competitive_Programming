@@ -83,6 +83,7 @@ The niche problem implementations I currently bring to competitions are listed b
 * [Efficient Submask Generation](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/busplanning.cpp)
 * [Longest Increasing Subsequence for Pairs](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/lisii.cpp)
 * [Counting the Number of Minimum Spanning Trees](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/countmsts.cpp)
+* [Calculating Bell Numbers](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/shatteredpumpkins.cpp)
 
 ### Miscellaneous
 
