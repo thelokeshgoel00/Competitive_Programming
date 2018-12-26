@@ -44,30 +44,26 @@ using ordered_multiset = __gnu_pbds::tree<T, __gnu_pbds::null_type, less_equal<T
 #define lb lower_bound
 #define ub upper_bound
 
-int N, M, K, costs [5010][610], ret = MOD;
+int N, M, K;
 vector<pair<int, int>> adjacency [5010];
-priority_queue<pair<int, pair<int, int>>> pq;
+long long dp [2][5010];
 
 int main(){
     freopen("path.in", "r", stdin); freopen("path.out", "w", stdout);
     ios_base::sync_with_stdio(0); cin.tie(0); cout << fixed << setprecision(0);
-    cin >> N >> M >> K; memset(costs, -1, sizeof(costs)); pq.push(mp(0, mp(1, 0)));
+    cin >> N >> M >> K; fill(dp[0], dp[0]+N+1, MOD); dp[0][1] = 0;
     for(int i = 0; i < M; i++){
         int a, b, c; cin >> a >> b >> c;
         adjacency[a].pb(mp(b, c)); adjacency[b].pb(mp(a, c));
     }
-    while(pq.size() > 0){
-        pair<int, pair<int, int>> now = pq.top(); pq.pop();
-        if(costs[now.s.f][now.s.s] != -1) continue;
-        if(now.s.f == N && now.s.s == K) ret = min(ret, -now.f);
-        costs[now.s.f][now.s.s] = -now.f;
-        if(now.s.s == K) continue;
-        for(pair<int, int> edge : adjacency[now.s.f]){
-            int nexty = edge.f, newCost = now.f-edge.s;
-            if(costs[nexty][now.s.s+1] == -1) pq.push(mp(newCost, mp(nexty, now.s.s+1)));
-        }
+    for(int k = 0; k < K; k++){
+        int now = k%2, nexty = (k+1)%2;
+        fill(dp[nexty], dp[nexty]+N+1, MOD);
+        for(int i = 1; i <= N; i++)
+            for(pair<int, int> edge : adjacency[i])
+                dp[nexty][edge.f] = min(dp[nexty][edge.f], dp[now][i]+edge.s);
     }
-    cout << ret << '\n';
+    cout << dp[K%2][N] << '\n';
     return 0;
 }
 
