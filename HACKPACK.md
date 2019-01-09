@@ -16,6 +16,7 @@ The algorithm and special technique implementations I currently bring to competi
 * [Static 2D Convex Hull](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2018%20Contest%20No.%205/forest.cpp)
 * [Incremental 2D Convex Hull](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2015%20Gold%20February%20Contest/fencing.cpp)
 * [Offline Convex Hull Trick](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/coveredwalkway.cpp)
+* [Online Convex Hull Trick](https://oj.uz/problem/view/CEOI17_building)
 * [General DFS Technique](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2017%20Contest%20No.%203/upgrade.cpp)
 * [Dijkstra's Single Source Shortest Path](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2014%20Silver%20US%20Open%20Contest/gpsduel.cpp)
 * [Dinic's Max Flow (Slower to Implement, Faster to Run) in Finding the Maximum Independent Set](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2011%20Gold%20November%20Contest/steeple.cpp)
