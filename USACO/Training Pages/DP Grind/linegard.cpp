@@ -48,7 +48,7 @@ int N, M, dp [1000010][4][4], ret = 1;
 string s;
 
 int main(){
-    //freopen("linegard.in", "r", stdin); freopen("linegard.out", "w", stdout);
+    freopen("linegard.in", "r", stdin); freopen("linegard.out", "w", stdout);
     ios_base::sync_with_stdio(0); cin.tie(0); cout << fixed << setprecision(10);
     cin >> N >> M >> s;
     for(int maxi = 0; maxi < 3; maxi++)
