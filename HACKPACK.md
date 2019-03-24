@@ -19,6 +19,7 @@ The algorithm and special technique implementations I currently bring to competi
 * [Online Convex Hull Trick](https://github.com/vmaddur/Competitive_Programming/blob/master/CEOI/buildingbridges.cpp)
 * [General DFS Technique](https://github.com/vmaddur/Competitive_Programming/blob/master/UCF%20Camp/2017%20Contest%20No.%203/upgrade.cpp)
 * [Dijkstra's Single Source Shortest Path](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2014%20Silver%20US%20Open%20Contest/gpsduel.cpp)
+* [Eulerian Path](https://github.com/vmaddur/Competitive_Programming/blob/master/Kattis/eulerianpath.cpp)
 * [Dinic's Max Flow (Slower to Implement, Faster to Run) in Maximum Matching Problem](https://github.com/vmaddur/Competitive_Programming/blob/master/Kattis/pianolessons.cpp)
 * [Edmonds–Karp Max Flow (Faster to Implement, Slower to Run) in Minimum Cut Problem](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Training%20Pages/Chapter%205/telecow.cpp)
 * [Min Cost Flow](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/insistentcousin.cpp)
