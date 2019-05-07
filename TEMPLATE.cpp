@@ -11,8 +11,8 @@ template <class T>
 using ordered_multiset = __gnu_pbds::tree<T, __gnu_pbds::null_type, less_equal<T>, __gnu_pbds::rb_tree_tag, __gnu_pbds::tree_order_statistics_node_update>;
 
 #define PI atan2(0, -1)
-#define epsilon 0.000000001
-#define INF 5000000000000000000
+#define epsilon 1e-9
+#define INF 5e18
 #define MOD 1000000007
 
 #define mp make_pair
