@@ -1,6 +1,9 @@
 #define __USE_MINGW_ANSI_STDIO 0
-#include <bits/stdc++.h>
 
+#pragma GCC optimize ("O3")
+#pragma GCC target ("sse4")
+
+#include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
 
