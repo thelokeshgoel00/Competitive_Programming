@@ -93,6 +93,7 @@ The niche problem implementations I currently bring to competitions are listed b
 * [Calculating Bell Numbers](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/shatteredpumpkins.cpp)
 * [Manhattan MST](https://github.com/vmaddur/Competitive_Programming/blob/master/Kattis/gridmst.cpp)
 * [Maximum Number of Circles Intersected by a Single Line](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/tudorgoats.cpp)
+* [Maximum Size of a Rectangle in a Grid with Obstacles](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/maximumbuilding.cpp)
 
 ### Miscellaneous
 
