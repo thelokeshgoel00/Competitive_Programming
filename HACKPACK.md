@@ -44,6 +44,7 @@ The algorithm and special technique implementations I currently bring to competi
 * [Finding Strongly Connected Components](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/Training%20Pages/Chapter%205/schlnet.cpp)
 * [Ternary Search](https://github.com/vmaddur/Competitive_Programming/blob/master/Kattis/jewelrybox.cpp)
 * [Traveling Salesman Problem](https://github.com/vmaddur/Competitive_Programming/blob/master/USACO/2013%20Gold%20January%20Contest/island.cpp)
+* [Two-Satisfiability Problem](https://github.com/vmaddur/Competitive_Programming/blob/master/Miscellaneous/giantpizza.cpp)
 
 ### Data Structures
 
