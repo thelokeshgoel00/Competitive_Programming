@@ -1,5 +1,3 @@
-#define __USE_MINGW_ANSI_STDIO 0
-
 #pragma GCC optimize ("O3")
 #pragma GCC target ("sse4")
 
@@ -25,15 +23,10 @@ using ordered_multiset = __gnu_pbds::tree<T, __gnu_pbds::null_type, less_equal<T
 #define lb lower_bound
 #define ub upper_bound
 
-int kase;
-
 int main(){
     //freopen("sort.in", "r", stdin); freopen("sort.out", "w", stdout);
     ios_base::sync_with_stdio(0); cin.tie(0); cout << fixed << setprecision(10);
-    cin >> kase;
-    for(int kk = 1; kk <= kase; kk++){
 
-    }
     return 0;
 }
 
