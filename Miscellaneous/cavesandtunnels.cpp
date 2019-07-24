@@ -76,23 +76,21 @@ template<int sz, bool useEdge> struct HeavyLight{
 
     void addEdge(int a, int b){ adjacency[a].pb(b); adjacency[b].pb(a); }
 
-    void dfs(int curr = 1, int prevy = 0){
+    void dfs(int curr = 1){
+        if(parents[curr]) adjacency[curr].erase(find(adjacency[curr].begin(), adjacency[curr].end(), parents[curr]));
         subtreeSizes[curr] = 1;
-        for(int i = 0; i < adjacency[curr].size(); i++){
-            int nexty = adjacency[curr][i];
-            if(nexty == prevy) continue;
+        for(int &nexty : adjacency[curr]){
             parents[nexty] = curr; depths[nexty] = depths[curr]+1;
-            dfs(nexty, curr); subtreeSizes[curr] += subtreeSizes[nexty];
-            if(subtreeSizes[nexty] > subtreeSizes[adjacency[curr][0]]) swap(adjacency[curr][i], adjacency[curr][0]);
+            dfs(nexty); subtreeSizes[curr] += subtreeSizes[nexty];
+            if(subtreeSizes[nexty] > subtreeSizes[adjacency[curr][0]]) swap(nexty, adjacency[curr][0]);
         }
     }
 
-    void HLD(int curr = 1, int prevy = 0){
+    void HLD(int curr = 1){
         segPos[curr] = id++;
-        for(int nexty : adjacency[curr]){
-            if(nexty == prevy) continue;
+        for(int &nexty : adjacency[curr]){
             root[nexty] = (nexty == adjacency[curr][0] ? root[curr] : nexty);
-            HLD(nexty, curr);
+            HLD(nexty);
         }
     }
 
