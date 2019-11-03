@@ -86,40 +86,39 @@ struct TwoSat{
 
     int addVar(){ return N++; }
 
-    void either(int x, int y) {
-		x = max(2*x,-1-2*x), y = max(2*y,-1-2*y);
-		scc.addEdge(x^1, y); scc.addEdge(y^1,x);
+    void either(int x, int y){
+        x = max(2*x,-1-2*x), y = max(2*y,-1-2*y);
+        scc.addEdge(x^1, y); scc.addEdge(y^1,x);
     }
 	void implies(int x, int y) { either(~x, y); }
 	void setVal(int x) { either(x, x); }
-	void atMostOne(const vector<int> &group) {
-		if(group.size() <= 1) return;
-		int curr = ~group[0];
-		for(int i = 2; i < group.size(); i++){
-			int nexty = addVar();
-			either(curr, ~group[i]);
-			either(curr, nexty);
-			either(~group[i], nexty);
-			curr = ~nexty;
-		}
-		either(curr, ~group[1]);
+	void atMostOne(const vector<int> &group){
+	    if(group.size() <= 1) return;
+	    int curr = ~group[0];
+	    for(int i = 2; i < group.size(); i++){
+            int nexty = addVar();
+            either(curr, ~group[i]);
+            either(curr, nexty);
+            either(~group[i], nexty);
+            curr = ~nexty;
+        }
+        either(curr, ~group[1]);
 	}
 
 	bool solveIt(){
-		scc.findSCC();
-		for(int i = 0; i < 2*N; i += 2)
-			if(scc.sccNum[i] == scc.sccNum[i^1])
-				return 0;
-		vector<int> temp(scc.sccID);
-		for(int i = 0; i < scc.sccID; i++)
-			if(temp[i] == 0)
-				temp[i] = 1, temp[scc.sccNum[scc.sccNodes[i].front()^1]] = -1;
-		for(int i = 0; i < N; i++)
-			if(temp[scc.sccNum[2*i]] == 1)
-				ret[i] = true;
-		return true;
-	}
-
+	    scc.findSCC();
+	    for(int i = 0; i < 2*N; i += 2)
+            if(scc.sccNum[i] == scc.sccNum[i^1])
+            return 0;
+        vector<int> temp(scc.sccID);
+        for(int i = 0; i < scc.sccID; i++)
+            if(temp[i] == 0)
+            temp[i] = 1, temp[scc.sccNum[scc.sccNodes[i].front()^1]] = -1;
+        for(int i = 0; i < N; i++)
+            if(temp[scc.sccNum[2*i]] == 1)
+                ret[i] = true;
+        return true;
+    }
 };
 
 int numConditions;
