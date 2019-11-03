@@ -106,18 +106,18 @@ struct TwoSat{
 	}
 
 	bool solveIt(){
-        scc.findSCC();
-        for(int i = 0; i < 2*N; i += 2)
-            if(scc.sccNum[i] == scc.sccNum[i^1])
-                return 0;
-        vector<int> temp(scc.sccID);
-        for(int i = 0; i < scc.sccID; i++)
-            if(temp[i] == 0)
-                temp[i] = 1, temp[scc.sccNum[scc.sccNodes[i].front()^1]] = -1;
-        for(int i = 0; i < N; i++)
-            if(temp[scc.sccNum[2*i]] == 1)
-                ret[i] = true;
-        return true;
+		scc.findSCC();
+		for(int i = 0; i < 2*N; i += 2)
+			if(scc.sccNum[i] == scc.sccNum[i^1])
+				return 0;
+		vector<int> temp(scc.sccID);
+		for(int i = 0; i < scc.sccID; i++)
+			if(temp[i] == 0)
+				temp[i] = 1, temp[scc.sccNum[scc.sccNodes[i].front()^1]] = -1;
+		for(int i = 0; i < N; i++)
+			if(temp[scc.sccNum[2*i]] == 1)
+				ret[i] = true;
+		return true;
 	}
 
 };
