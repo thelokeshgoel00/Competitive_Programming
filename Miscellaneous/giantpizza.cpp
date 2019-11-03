@@ -105,7 +105,7 @@ struct TwoSat{
         either(curr, ~group[1]);
     }
 
-	bool solveIt(){
+    bool solveIt(){
         scc.findSCC();
         for(int i = 0; i < 2*N; i += 2)
             if(scc.sccNum[i] == scc.sccNum[i^1])
