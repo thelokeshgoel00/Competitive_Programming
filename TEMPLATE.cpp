@@ -1,5 +1,5 @@
-#pragma GCC optimize ("O3")
-#pragma GCC target ("sse4")
+#pragma GCC optimize("Ofast")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
 
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
@@ -16,15 +16,16 @@ using ordered_multiset = __gnu_pbds::tree<T, __gnu_pbds::null_type, less_equal<T
 #define INF 5e18
 #define MOD 1000000007
 
-#define mp make_pair
+#define all(x) begin(x), end(x)
 #define pb push_back
+#define mp make_pair
 #define f first
 #define s second
 #define lb lower_bound
 #define ub upper_bound
 
 int main(){
-    //freopen("sort.in", "r", stdin); freopen("sort.out", "w", stdout);
+    //freopen("input.txt", "r", stdin); freopen("output.txt", "w", stdout);
     ios_base::sync_with_stdio(0); cin.tie(0); cout << fixed << setprecision(10);
 
     return 0;
