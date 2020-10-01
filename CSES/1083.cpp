@@ -13,13 +13,15 @@ using namespace std;
 int main(){
      
      ll n; cin>>n;
-     while(n!=1){
-        cout<<n<<" ";
-        if(n%2) n= n*3+1;
-        else n/=2;
- 
+     vector< ll > v(n+1,0);
+     ll k = n-1;
+     while(k--){
+        ll val ; cin>>val;
+        v[val]=1;
      }
-     cout<<1<<endl;
+     for(ll i=1;i<n+1;i++){
+        if(v[i]==0) return cout<<i<<" "<<endl,0;
+     }
  
     return 0;
 }
