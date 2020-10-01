@@ -12,14 +12,18 @@ using namespace std;
  
 int main(){
      
-     ll n; cin>>n;
-     while(n!=1){
-        cout<<n<<" ";
-        if(n%2) n= n*3+1;
-        else n/=2;
- 
+     string st;
+     cin>>st;
+     ll cnt=1;
+     ll mx=0;
+     for(ll i=1;i<st.length()+1;i++){
+        if(st[i]==st[i-1]) cnt++;
+        else{
+            mx  = max(mx,cnt);
+            cnt=1;
+        }
      }
-     cout<<1<<endl;
+     cout<<mx<<endl;
  
     return 0;
 }
