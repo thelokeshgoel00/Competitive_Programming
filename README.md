@@ -4,8 +4,6 @@ Solutions to Problems From Programming Contests and Practice Sites
 Have a Competitive Programming Problem, Check here We might have a solution
 
 
-## Made a new code, submit a PR (We Love To contribute)
-
 # Contribution Guide
 ##### If you don't have git on your machine, [install it](https://help.github.com/articles/set-up-git/).
 
