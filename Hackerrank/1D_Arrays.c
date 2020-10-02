@@ -1,5 +1,6 @@
 
 /* https://www.hackerrank.com/challenges/1d-arrays-in-c/problem */
+/* */
 
 #include <stdio.h>
 #include <string.h>
