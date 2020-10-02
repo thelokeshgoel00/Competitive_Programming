@@ -2,7 +2,7 @@ class Solution {
 public:
     int findDuplicate(vector<int>& nums) {
         int i;
-        sort(nums.begin(),nums.end());   //sorting the array
+        sort(nums.begin(),nums.end());
         int h=nums.size();
         for(i=0;i<h-1;i++)
         {
