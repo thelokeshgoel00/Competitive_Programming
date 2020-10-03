@@ -54,3 +54,35 @@ bool Solution::isPalindrome(int n) {
     if(res==n) return 1;
     return 0;
 }
+
+//Solution 3:(in java)
+package java_assignment;
+
+import java.util.Scanner;
+
+public class ques_4 
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the number: ");
+		int num=sc.nextInt();
+	    int temp=num;
+	    int rev_num=0;
+	    while(temp!=0)
+	    {
+	    	int rem=temp%10;
+	    	rev_num=rev_num*10+rem;
+	    	temp=temp/10;
+	    }
+	    System.out.println("The reverse is: "+rev_num);
+	    if(num==rev_num)
+	    {
+	    	 System.out.print("Given number is Palindrome");
+	    }
+	    else
+	    {
+	    	System.out.print("Given number is not Palindrome");
+	    }
+	}
+}
