@@ -22,3 +22,42 @@ vector<int> largestAndSecondLargest(int sizeOfArray, int arr[]){
      * *******************************/
      
 }
+
+//solution-2
+    
+    package java_assignment;
+
+import java.util.Scanner;
+
+public class ques_3 
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter no of items: ");
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		System.out.print("Enter The elements: ");
+		for(int i=0;i<n;i++)
+		{
+			arr[i]=sc.nextInt();
+        }
+		int temp=2;
+		int j=0;
+		while(temp!=0)
+		{
+			int max=0;
+			for(int i=0;i<n-j;i++)
+			{
+				if(arr[i]>arr[max])
+					max=i;
+			}
+			System.out.print(arr[max]+" ");
+			int t=arr[max];
+			arr[max]=arr[n-1-j];
+			arr[n-1-j]=t;
+			j++;
+			temp--;
+		}
+	}
+}
