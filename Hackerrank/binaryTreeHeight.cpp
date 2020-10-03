@@ -14,6 +14,5 @@ class Node {
         if(root->right!=NULL)
             h2= 1+ height(root->right);
         return (h1>h2)?h1:h2;
-        // Write your code here.
     }
   
