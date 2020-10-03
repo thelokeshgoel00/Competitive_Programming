@@ -4,9 +4,13 @@ int main(){
 	int n;
 	cin>>n;
 	int ans = 1;
-	while(n){
+	if(n>0){
+		while(n){
 		ans*=n;
 		n--;
+		}
+		cout<<ans;
 	}
-	cout<<ans<<endl;
+	else if(n==0) cout<<ans;
+	else cout<<"Factorial of negative number can not be obtained...";
 }
