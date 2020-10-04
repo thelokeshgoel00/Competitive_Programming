@@ -1,0 +1,106 @@
+#include<stdio.h>
+#include<stdlib.h>
+typedef struct node
+{
+	int data;
+	node *link;
+}node;
+
+node *create()
+{
+	node *start,*last,*temp;
+	int x;
+	printf("press 1 to enter value \npress 0 to exit");
+	scanf("%d",&x);
+	if(x==0)
+	{
+		start=NULL;
+	}
+	if(x==1)
+	{
+		int var;
+		start=(node*)malloc(sizeof(node));
+		printf("enter data: ");
+		scanf("%d",&var);
+		start->data=var;
+		last=start;
+		printf("\n");
+		while(1)
+	{
+	  int x;
+	  printf("press 1 to enter value \npress 0 to exit");
+	  scanf("%d",&x);
+	  if(x==0)
+	  {
+	  last->link=NULL;
+	  break;
+      }
+	  else
+	  {
+	  	int var;
+	  	 printf("enter data: ");
+		 scanf("%d",&var);
+	  	 temp=(node*)malloc(sizeof(node));
+	  	 temp->data=var;
+	  	 last->link=temp;
+	  	 last=last->link;
+	  	 
+	  }
+	  printf("\n");
+	}
+	last->link=NULL;
+    }
+    return start;
+    printf("\n");
+}
+void traverse(node *start)
+{
+	node *temp;
+	temp=start;
+	if(start==NULL)
+	{
+		printf("\n");
+		printf("list empty");
+	}
+	else
+	{
+		while(temp!=NULL)
+		{
+		printf("%d ",temp->data);
+		temp=temp->link;
+	    }
+	    printf("\n");
+	}
+}
+
+node*  merge(node *start1,node *start2)
+{
+    node *start3,*temp1,*temp2,*last;
+    temp1=start1;
+    temp2=start2;
+    start3=last;
+    while(temp1!=NULL && temp2!=NULL)
+    {
+    	if(temp1->data<temp2->data)
+    	{
+    		last=temp1;
+    		temp1=temp1->link;
+		}
+		else if(temp1->data>temp2->data)
+		{
+			last=temp2;
+			temp2=temp2->link;
+		}
+	}
+}
+int main()
+{
+	node *start1,*start2,*start3;
+	printf("enter first list:- ");
+	start1=create();
+	printf("enter second list:- ");
+	start2=create();
+	printf("\n");
+	start3=merge(start1,start2);
+	traverse(start3);
+}
