@@ -1,4 +1,31 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	long long t;
+	
+	cin>> t;
+	while (t--)
+	{
+	    long long f=1,j,i,n,s=0,ans;
+	    cin>> n;
+	    long long a[n];
+	    for (i=0;i<n;i++)
+	{
+	    cin >> a[i];
+	    s = s+ a[i];
+	}
+
+	for (j=n-1;j>0;j--){
+	    f=f*j;
+	}
+	ans = f * s * ((pow(10,n) -1)/9);
+	cout << ans << endl;
+
+}
+    return 0;
+}
+
+/*#include<bits/stdc++.h>
 using namespace std;
 #define ll long long
 #define fin for(int i=0;i<n;i++)
