@@ -1,7 +1,6 @@
 
 /* https://www.hackerrank.com/challenges/1d-arrays-in-c/problem */
 /* */
-
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
@@ -10,21 +9,22 @@
 int main()
 {
 
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     int n, i, sum = 0;
+    printf("Enter the size of the array : ");
     scanf("%d", &n);
-    int *arr = (int *)malloc(n * sizeof(int));
+    int *a = (int *)malloc(n * sizeof(int));
+    printf("Enter the elements : ");
     for (i = 0; i < n; i++)
     {
-        scanf("%d", arr + i);
+        scanf("%d", a + i);
     }
 
     for (i = 0; i < n; i++)
     {
-        sum += *(arr + i);
+        sum =sum + *(a + i);
     }
 
     printf("%d\n", sum);
-    free(arr);
+    free(a);
     return 0;
 }
