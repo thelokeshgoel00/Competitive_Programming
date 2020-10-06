@@ -1,5 +1,3 @@
-#define __USE_MINGW_ANSI_STDIO 0
-
 #pragma GCC optimize ("O3")
 #pragma GCC target ("sse4")
 
@@ -14,7 +12,7 @@ template <class T>
 using ordered_multiset = __gnu_pbds::tree<T, __gnu_pbds::null_type, less_equal<T>, __gnu_pbds::rb_tree_tag, __gnu_pbds::tree_order_statistics_node_update>;
 
 #define PI atan2(0, -1)
-#define epsilon 1e-9
+#define epsilon 1e-12
 #define INF 5e18
 #define MOD 1000000007
 
@@ -25,60 +23,122 @@ using ordered_multiset = __gnu_pbds::tree<T, __gnu_pbds::null_type, less_equal<T
 #define lb lower_bound
 #define ub upper_bound
 
-int N, M, sccID = 0, tiempo = 0, disc [200010], low [200010], sccNum [200010], ret [200010];
-vector<int> oriAdjacency [200010], sccNodes [200010];
-bool inStack [200010];
-stack<int> componente;
-queue<int> process;
+struct SCC{
+    int N, sccID, tiempo;
+    int disc [200010], low [200010], sccNum [200010];
+    vector<int> oriAdjacency [200010], sccNodes [200010], sccAdjacency [200010];
+    bool inStack [200010];
+    stack<int> componente;
 
-void findSCC(int curr){
-    disc[curr] = tiempo; low[curr] = tiempo; tiempo++;
-    componente.push(curr); inStack[curr] = true;
-    for(int i = 0; i < oriAdjacency[curr].size(); i++){
-        int next = oriAdjacency[curr][i];
-        if(disc[next] == -1){
-            findSCC(next);
-            low[curr] = min(low[curr], low[next]);
+    void resetIt(){
+        sccID = tiempo = 0;
+        for(int i = 0; i < N; i++){
+            disc[i] = low[i] = sccNum[i] = -1;
+            oriAdjacency[i] = vector<int>();
+            sccNodes[i] = vector<int>();
+            sccAdjacency[i] = vector<int>();
         }
-        else if(inStack[next]) low[curr] = min(low[curr], disc[next]);
     }
-    if(low[curr] == disc[curr]){
-        int now = -1;
-        while(componente.top() != curr){
+
+    void addEdge(int a, int b){ oriAdjacency[a].pb(b); }
+
+    void findSCC(int curr){
+        disc[curr] = tiempo; low[curr] = tiempo; tiempo++;
+        componente.push(curr); inStack[curr] = true;
+        for(int i = 0; i < oriAdjacency[curr].size(); i++){
+            int next = oriAdjacency[curr][i];
+            if(disc[next] == -1){
+                findSCC(next);
+                low[curr] = min(low[curr], low[next]);
+            }
+            else if(inStack[next]) low[curr] = min(low[curr], disc[next]);
+        }
+        if(low[curr] == disc[curr]){
+            int now = -1;
+            while(componente.top() != curr){
+                now = componente.top(); componente.pop();
+                sccNodes[sccID].pb(now);
+                inStack[now] = false; sccNum[now] = sccID;
+            }
             now = componente.top(); componente.pop();
             sccNodes[sccID].pb(now);
             inStack[now] = false; sccNum[now] = sccID;
+            sccID++;
         }
-        now = componente.top(); componente.pop();
-        sccNodes[sccID].pb(now);
-        inStack[now] = false; sccNum[now] = sccID;
-        sccID++;
     }
-}
+
+    void findSCC(){
+        for(int i = 0; i < N; i++)
+            if(disc[i] == -1)
+                findSCC(i);
+    }
+};
+
+struct TwoSat{
+    int N;
+    SCC scc;
+    bool ret [100010];
+
+    void resetIt(){
+        scc.N = 2*N; scc.resetIt();
+        for(int i = 0; i < N; i++) ret[i] = false;
+    }
+
+    int addVar(){ return N++; }
+
+    void either(int x, int y){
+        x = max(2*x,-1-2*x), y = max(2*y,-1-2*y);
+        scc.addEdge(x^1, y); scc.addEdge(y^1,x);
+    }
+    void implies(int x, int y) { either(~x, y); }
+    void setVal(int x) { either(x, x); }
+    void atMostOne(const vector<int> &group){
+        if(group.size() <= 1) return;
+        int curr = ~group[0];
+        for(int i = 2; i < group.size(); i++){
+            int nexty = addVar();
+            either(curr, ~group[i]);
+            either(curr, nexty);
+            either(~group[i], nexty);
+            curr = ~nexty;
+        }
+        either(curr, ~group[1]);
+    }
+
+    bool solveIt(){
+        scc.findSCC();
+        for(int i = 0; i < 2*N; i += 2)
+            if(scc.sccNum[i] == scc.sccNum[i^1])
+                return 0;
+        vector<int> temp(scc.sccID);
+        for(int i = 0; i < scc.sccID; i++)
+            if(temp[i] == 0)
+            temp[i] = 1, temp[scc.sccNum[scc.sccNodes[i].front()^1]] = -1;
+        for(int i = 0; i < N; i++)
+            if(temp[scc.sccNum[2*i]] == 1)
+                ret[i] = true;
+        return true;
+    }
+};
+
+int numConditions;
+TwoSat solver;
 
 int main(){
     //freopen("sort.in", "r", stdin); freopen("sort.out", "w", stdout);
     ios_base::sync_with_stdio(0); cin.tie(0); cout << fixed << setprecision(10);
-    cin >> N >> M; for(int i = 0; i < 2*M; i++) disc[i] = low[i] = sccNum[i] = -1;
-    for(int i = 1; i <= N; i++){
-        char c1, c2; int v1, v2, a, b; cin >> c1 >> v1 >> c2 >> v2; v1--; v2--;
-        a = 2*v1+(c1 == '+'); b = 2*v2+(c2 == '+');
-        oriAdjacency[a^1].pb(b); oriAdjacency[b^1].pb(a);
+    cin >> numConditions >> solver.N; solver.resetIt();
+    for(int i = 0; i < numConditions; i++){
+        char c1, c2; int v1, v2; cin >> c1 >> v1 >> c2 >> v2; v1--; v2--;
+        if(c1 == '-') v1 = ~v1;
+        if(c2 == '-') v2 = ~v2;
+        solver.either(v1, v2);
     }
-     for(int i = 0; i < 2*M; i++)
-        if(disc[i] == -1)
-            findSCC(i);
-    for(int i = 0; i < M; i++)
-        if(sccNum[2*i] == sccNum[2*i+1]){
-            cout << "IMPOSSIBLE\n";
-            return 0;
-        }
-    for(int k = sccID-1; k > -1; k--){
-        bool allTrue = true;
-        for(int i : sccNodes[k]) allTrue &= ret[i^1] != 1;
-        for(int i : sccNodes[k]) ret[i] = (allTrue ? 1 : -1);
+    if(!solver.solveIt()){
+        cout << "IMPOSSIBLE\n";
+        return 0;
     }
-    for(int i = 0; i < M; i++) cout << (ret[2*i] < 0 ? '-' : '+') << (i == M-1 ? '\n' : ' ');
+    for(int i = 0; i < solver.N; i++) cout << (solver.ret[i] ? '+' : '-') << (i == solver.N-1 ? '\n' : ' ');
     return 0;
 }
 
