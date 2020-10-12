@@ -1,4 +1,4 @@
- 
+ // Question- You are given two integer a and b. Print the greatest integer which completely divide a and b. (remainder=0)
 
 import java.util.*;
 
