@@ -1,2 +1,2 @@
 # Competitive_Programming
-Solutions to some of the coding problems
+Solutions to some of the coding problems.
