@@ -1,0 +1,88 @@
+/*
+Determine whether an integer is a palindrome. Do this without extra space.
+
+A palindrome integer is an integer x for which reverse(x) = x where reverse(x) is x with its digit reversed.
+Negative numbers are not palindromic.
+
+Example :
+
+Input : 12121
+Output : True
+
+Input : 123
+Output : False
+
+*/
+
+bool Solution::isPalindrome(int n) {
+    // Do not write main() function.
+    // Do not read input, instead use the arguments to the function.
+    // Do not print the output, instead return values as specified
+    // Still have a doubt. Checkout www.interviewbit.com/pages/sample_codes/ for more details
+    if(n<0) return false;
+    int x=n,s=0;
+    while(x){
+        s++;
+        x/=10;
+    }
+    int j=s-1;
+    while(n){
+        int y=n/(pow(10,j));
+        if(y!=(n%10))
+         return false;
+        n=n-y*pow(10,j);
+        n=n/10;
+        j-=2;
+    }
+    return true;
+}
+
+//Solution 2: by reversing the integer
+
+bool Solution::isPalindrome(int n) {
+    // Do not write main() function.
+    // Do not read input, instead use the arguments to the function.
+    // Do not print the output, instead return values as specified
+    // Still have a doubt. Checkout www.interviewbit.com/pages/sample_codes/ for more details
+    if(n<0) return false;
+    int x=n;
+    long long res=0;
+    while(x){
+        res=res*10+x%10;
+        x=x/10;
+    }
+    if(res==n) return 1;
+    return 0;
+}
+
+//Solution 3:(in java)
+package java_assignment;
+
+import java.util.Scanner;
+
+public class ques_4 
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the number: ");
+		int num=sc.nextInt();
+	    int temp=num;
+	    int rev_num=0;
+	    while(temp!=0)
+	    {
+	    	int rem=temp%10;
+	    	rev_num=rev_num*10+rem;
+	    	temp=temp/10;
+	    }
+	    System.out.println("The reverse is: "+rev_num);
+	    if(num==rev_num)
+	    {
+	    	 System.out.print("Given number is Palindrome");
+	    }
+	    else
+	    {
+	    	System.out.print("Given number is not Palindrome");
+	    }
+	}
+}
